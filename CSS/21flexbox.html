@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            display: flex;    /*for content flexing in direction (default = top to botton) (flex = left to right)*/
+            
+            height: 80vh;
+            /*justify-content: center;       /*justify content center to main axis*/          /*if flex direction is row then row wise center , if flex dirextion is column then column wise center*/
+            /*align-items: center;           /*align items center to cross axis*/     /*if flex direction is row then column wise center , if flex dirextion is column then row wise center*/
+
+            /* Note */  /* main start & main end & main size, along with main axis */
+                        /*cross start & cross end & cross size, along with cross axis */
+
+            /*justify-content: flex-end;    /*all content will goes at the flex-end of main axis*/
+            /*justify-content: right;       /*all content will goes at the flex-end of main axis*/
+            /*justify-content: end;         /*all content will goes at the flex-end of main axis*/
+
+            /*justify-content: flex-start;     /*all content will goes at the flex start of main axis*/
+            /*justify-content: left;           /*all content will goes at the flex start of main axis*/
+            /*justify-content: start;          /*all content will goes at the flex start of main axis*/
+
+            /*align-items: flex-end;             /*all content will goes at the flex-end of cross axis*/
+            /*align-items: end;                  /*all content will goes at the flex-end of cross axis*/
+
+            /*align-items: flex-start;                  /*all content will goes at the flex-start of cross axis*/
+            /*align-items: start;                       /*all content will goes at the flex-start of cross axis*/
+
+            /*takes whole width, maintain the equal space*/   /*start boxes gap & end boxes gap par 1/2 gap of b/w spaces of 2 consecutive container lagegi*/
+            /* justify-content: space-around;     */
+
+            /*same as sapce-around but space of start & end will not retain*/
+            /* justify-content: space-between;   */
+
+            /*flex-direction: column;*/         /*flexing content column wise*/
+            /*flex-direction: column-reverse;     /*jaise box lagna tha waise hi ulta lag jayenge*/
+
+            flex-wrap: wrap;      /*if align horizontal if boxes is extra than it will wrap down automatically, with maintain box width/height */
+            /*align-content: center;      /*space fixing of multiple line content in flexbox use align-content: */
+            /* align-content: flex-start; */     /*space fixing of multiple line content in flexbox use align-content: */
+            /* align-content: flex-end; */     /*space fixing of multiple line content in flexbox use align-content: */
+
+            /* there is no justify-items  in flexbox; */
+
+            flex-flow: row wrap;    /*flexing row with wrap*/
+            /*flex-flow: column wrap;    /*flexing column with wrap*/
+            /* gap: 30px;          
+            row-gap: 40px;          
+            column-gap: 10px; */
+            gap: 40px 10px;  /*gap b/w 2 row is 40px , gap b/w 2 column is 10px*/
+
+        }
+
+        .item {  
+            /* flex-grow: 1; */
+            height: 92px;
+            width: 92px;
+            border: 2px solid black;
+            /* margin: 4px; */
+            background-color: blueviolet;
+        }
+
+        /* flexbox item order property */
+        .order-1{
+            order: 1;   /*order is flexbox css items property that arrange the boxes with acending order (default order is 0) */
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+
+        /*.item1{  
+            flex-grow: 2;    /*.item1 class box will increase with size only this item*/
+            /* flex-shrink: 2;         /*.item1 class box will decrease with size only this item*/
+            /*align-self: flex-start;  /*only this item will fix at start*/
+            /*align-self: flex-end;    /*only this item will fix at end*/
+        /* }  */
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="item item1">0</div>
+            <div class="item order-1">1</div>
+            <div class="item order-2">2</div>
+            <div class="item order-3">3</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>

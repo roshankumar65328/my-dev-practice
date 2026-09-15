@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Transform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+            /* transform: rotate(0.125turn);     /*rotate(1turn) = 360degree*/
+            /* transform-origin: -50% -50%;      /*it will work only when rotation applied to it*/
+            /* transform: rotateX(59deg);        /*box will rotate toward x-axis*/
+            /* transform: rotateY(20deg);        /*box will rotate toward y-axis*/
+            /* transform: rotateZ(20deg);        /*box will rotate toward z-axis*/
+
+            /* transform: scaleX(1.5);         /*it enhaces the size of the container on X-axis*/
+            /* transform: scaleY(1.5);         /*it enhaces the size of the container on Y-axis*/
+            /* transform: scale(1.5);         /*it enhaces the size of the container on overall*/
+            /* we can't scale the element in Z-axis */
+            
+            /* transform: skewX(34deg);    /*it looks like box streaches the box on X-axis*/
+            /* transform: skewY(34deg);    /*it looks like box streaches the box on Y-axis*/
+            /* we can't skew the element in Z-axis */
+
+            /* transform: translateX(40px);      /*content shift with 40px on X-axis*/
+            /* transform: translateY(40px);      /*content shift with 40px on X-axis*/
+            /* we can't translate in Z-axis */
+            
+            /* transform: translateY(100%) skewX(40deg) translateX(45%); */    /*multi transform apply, when we use % in transform means box width, height refference*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            margin: 55px;
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+
+</html>

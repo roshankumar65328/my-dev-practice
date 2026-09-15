@@ -14,22 +14,29 @@
 
         .box {
             border: 2px solid black;
-            display: inline-block;
+            /*inline can be adjusted, content can start with new line*/ 
+            /*block element can be adjusted, height & width can be defined*/
+            /* display: inline; */   /*padding will can't be apply with display:inline; so use inline-block;*/
+            display: inline-block;  
             /*inline element directly don't support margin padding write this */
             width: 344px;    /*content width*/
             padding: 45px;   /*padding pixel*/
             margin: 34px;    /*margin pixel*/
-
-           
         }
 
         .box1 {
-            /* visibility:hidden;*/
-            /*box will hide but space will aquired plane */
-            /* display:none; */
-
-            display: flex;            /*for box content allign center*/
+            /*visibility:hidden;     /*box will hide but space will aquired plane */
+            display:none;            /* box will hide and space will also hide */         
+            display: flex;            /*for boxes allign same line left to right*/
             justify-content: center;  /*for box content allign center*/
+            display: grid;           /*for boxes content line wise*/
+        }
+
+        span{
+            display: block;   /*inline as block*/
+        }
+        .rosh{
+            display: inline;    /*block as inline*/
         }
     </style>
 </head>
@@ -43,6 +50,9 @@
     </div>
     <span>i am a good</span>
     <span>boy</span>
+    <span>boy</span>
+    <div class="rosh">roshan kumar</div>
+    <div class="rosh">roshan kumar</div>
 </body>
 
 

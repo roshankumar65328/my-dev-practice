@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width:100%;
+    height:100%;
+    background-color: black;
+    color:white;
+    font-family: "Noto Sans", sans-serif;;
+    font-weight: 100;
+}
+
+.nav{
+    display: flex;
+    height: 5vw;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5vw 0px 8vw;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.nav-part2{
+    display: flex;
+    gap:0px 3vw;
+}
+
+.hero{
+    font-size: 4vw;
+    /* font-weight: 400; */
+    font-family: open sans;
+    line-height: 8vw;
+    text-transform: uppercase;
+    width: 90%;
+    letter-spacing: -7px;
+    padding-left: 7%;
+    padding-top: 5vw;
+    position: relative;
+    z-index: 10;
+    color: linear-gradient(to right, white, gray);
+}
+
+
+.hero h1:nth-child(1){
+    padding-left: 2vw;
+}
+.hero h1:nth-child(2){
+        padding-left: 18vw;
+
+}
+.hero h1:nth-child(3){
+        padding-left: 35vw;
+
+}
+.heroimg:nth-child(1){
+    object-fit: cover;
+}
+.heroimg img{
+    width: 21vw;
+    height: 28vw;
+    position: absolute;
+    top:8vw;
+    left: 72%;
+}
+.img1{
+    rotate: 3deg;
+}
+.img2{
+    rotate: 5deg;
+}
+.img3{
+    rotate: 0deg;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Design a Youtube thumbnail of desktop version by function as </title>
+    <style>
+        .card {
+            display: flex;
+            border: 2px solid black;
+            width:900px;
+            /* justify-content: center; */
+            align-items: center;
+            padding: 3px;
+            margin: 5px;
+        }
+        .image{
+            position: relative;
+
+        }
+        .capsule{
+            position: absolute;
+            bottom:3px;
+            right:3px;
+            z-index:10;
+            background-color: rgb(49, 48, 48);
+            color:white;
+            margin: 5px;
+            border-radius: 6px;
+            padding: 2px 5px;
+        }
+        .text h1{
+            padding: 2px 18px;
+        }
+        .text p{
+            padding: 2px 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- ye pura (card class) ek refference banega function ka -->
+        <div class="card">
+            <div class="image">
+                <img class="image" width="200" src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDf-xrqgUw55JSfKsoykKVhngkzRA" alt="">
+                <div class="capsule">21:21</div>
+            </div>
+            <div class="text">
+                <h1>Introduction to Backend | Here we learn queries</h1>
+                    <p>CodeWithHarry . 727K views . 2 months ago</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="24question.js"></script>
+</body>
+</html>

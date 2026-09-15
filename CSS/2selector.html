@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="roshan" 
+    <meta name="description" content="this website is this this and this">
     <title>css selectors </title>
 
     <style>
@@ -22,12 +24,14 @@
             background-color:skyblue;
         }
 
-        /* Child Selector */
+        /* Child Selector (direct p inside div) */
 
         div > p {
             color: red;
             background-color: gray;
         }
+        
+        /* Child Selector (direct p or indirect p inside div) */
 
         div p {
             color:blue;
@@ -49,15 +53,17 @@
             /* color:gray; */
         }
 
+        /* when clicking on link at that time */
         a:active{
-            background-color:yellow;
+            background-color:rgb(229, 236, 30);
         }
 
+        /* when hower on link that time */
         a:hover{
             /* background-color:greenyellow; */
         }
 
-        /* all first p of each section will applicable */
+        /* all first p of each section will applicable || p jaha jaha 1st no. pe hoga */
         p:first-child{
             /* background-color:gold; */
         }

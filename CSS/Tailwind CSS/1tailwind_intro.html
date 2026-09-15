@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind css intro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- first link the tailwind css CDN for using tailwind css -->
+     <!-- go tailwind css site, go to docs , go to play CDN, copy script line of tailwind css CDN -->
+    <h1>Hey, its time to start tailwind CSS</h1>
+
+<!--tailwind css matlab css hath se nhi likhni hai sirf class lagani hai
+    tailwind css matlab pehle mobile ke liye code karna hai
+    tailwind css matlab, Responsiveness ke liye bas breakpoint target karne hai -->
+
+    <!-- tailwind css me jo bhi class likhna hai wo maan ke chalna hai mobile screen ko banaya ja rha hai,
+    pehle desktop nhi mobile screen ko code karte hai then tab & desktop ko code karte hai. -->
+    
+    <div class="flex">
+        <h2 class="font-semibold text-green-700">Hey</h2>   <!--text-yellow-700 means kitna dark chahiye, 100 kam dark, 900 jyada dark-->
+        <h2>Hello</h2>
+    </div>
+
+    <div>
+        <h3 class="text-6xl sm:text-5xl md:text-4xl lg:text-3xl xl:text-2xl">different breakpoint values</h3>    <!--text-2xl kitna bada font hona chahiye -->
+        <!--       0-640px  640-770px   770-1020px  1020-onwards       -->
+        <!--          |         |            |           | -->
+        <!-----------sm ,------md ,-------- lg ,---------xl ,-----------are the breakpoint in CSS -->
+    </div>
+</body>
+</html>

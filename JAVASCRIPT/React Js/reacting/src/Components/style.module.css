@@ -1,0 +1,15 @@
+.a{
+    color:orangered;
+}
+.b{
+    background-color:beige;
+}
+
+
+
+/* for using css module means */
+/* create a (style.module.css) file in (components) folder */
+/* and import the path in that component where you want to use css module */
+/* for use className={`${importname.classname}`} */
+/* ex:     className={`${style.a} ${style.b}`} */
+

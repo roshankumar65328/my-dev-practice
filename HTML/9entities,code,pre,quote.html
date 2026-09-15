@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
     <title>Entities , code tag , pre tag , quote</title>
+
+    <style>
+        pre{
+            border: 2px solid black
+        }
+    </style>
 </head>
 
 <body>
@@ -10,7 +16,7 @@
 
 
     <!-- what we write in pre that will as-it-is -->
-    <pre>this is a para
+    <pre>this is a para     graph
         
     
 this is after some line       rosh.kum</pre>
@@ -25,7 +31,7 @@ this is after some line       rosh.kum</pre>
 
     <!-- it tells the browser it is a quote -->
     <blockquote>
-        This is a quote  <cite> <a  href="https://www.google.com"> google</a> </cite>
+        This is a quote  <cite> <a  href="https://www.google.com"> google</a> </cite>        <!-- cite tag used write reference from it taken-->
     </blockquote>
 
 
@@ -35,7 +41,7 @@ this is after some line       rosh.kum</pre>
 
 <!-- we can write as-it-is coding text on our website using 
     pre,code tags and must use &lt; , &gt; entities  -->
-<pre><code>
+<pre id="codeBlock"><code>
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt; this is way of writing code on our website&lt;/title&gt;
@@ -44,8 +50,17 @@ this is after some line       rosh.kum</pre>
 this is body portion
 &lt;/body&gt;
 &lt;/html&gt;
-</code>
+</code></pre>
+<button id="code-btn">copy code</button>
 
+<script>
+document.getElementById("code-btn").addEventListener("click",()=>{
+    const code = document.getElementById("codeBlock").innerText;
+    navigator.clipboard.writeText(code).then(()=>{
+        alert("code copied !!");
+    })
+})
+</script>
 </body>
 
 </html>

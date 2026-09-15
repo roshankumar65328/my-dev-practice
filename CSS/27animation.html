@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation in css</title>
+    <style>
+        .container{
+            width:30vw;
+            height:70vh;
+            background-color: blueviolet;
+        }
+        .box{
+            width:35px;
+            height:40px;
+            /* animation: roshanimation;
+            animation-duration:1s;
+            /* animation-timing-function:ease-in-out;     /*we can also maipulate speed by inspect (like transition wala method)*/
+            /* animation-delay: 2s; */
+            /* animation-iteration-count: infinite; */
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-play-state: paused; */ 
+
+            /* shortcut */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* fill-mode is default "none" = without first key frame -> without any animation (initial state) */
+            /* animation-fill-mode:forwards;  /*without first keyframe reatain -> end keyframeeeee state will stay*/ 
+            /* animation-fill-mode:backwards;  /*first keyframe will stay -> stay at initial state without any amimation*/
+            /* for 2 animation apply same time by comma*/
+            animation: roshanimation 8s ease-in-out 2s 1 forwards ,
+                       roshanimation1 4s ease-in-out 2s 1;
+
+                       /*for 1 animation*/
+            /* animation: roshanimation1 4s ease-in-out 0s 1 forwards ; */
+        }
+
+        @keyframes roshanimation {
+            from{
+            background-color: red;
+
+            }
+            to{
+                transform: translateX(100px);
+                 background-color: yellow;
+
+            }
+        }
+        @keyframes roshanimation1{
+            0%{
+                transform:rotate(0deg);
+            }
+            20%{
+                transform:rotate(50deg);
+            }
+            40%{
+                transform:rotate(100deg);
+            }
+            60%{
+                transform:rotate(150deg);
+            }
+            80%{
+                transform:rotate(200deg);
+            }
+            100%{
+                transform:rotate(250deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color:rgb(42, 239, 78);
+    --seccolor:rgb(140, 247, 126);
+}
+
+body{
+    /* background-color: rgb(140, 247, 126); */
+    background-color: var(--seccolor);
+}
+
+nav{
+    /* background-color:rgb(42, 239, 78); */
+    background-color: var(--color);
+    height:90px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.second ul{
+    display: flex;
+    padding: 150px;
+}
+
+
+nav ul li{
+    list-style: none;
+    padding:0px 24px;
+    font-size:18px;
+    font-weight:700;
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+}
+
+.nav-img{
+    padding:0px 0px 0px 100px;
+}
+
+section{
+    text-align: center;
+}
+
+.flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    margin:auto
+}
+
+/* table,th,td{
+    border:2px solid black;
+} */
+
+.name-list{
+    padding:0px 0px 0px 18px;
+    border:2px solid black;
+    width:80px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.admission-form{
+    width: 60vw;
+    margin: auto;
+    border:2px solid black;
+
+}
+
+.msg-box label{
+    display: block;
+}
+
+
+/* div, span{
+    color:blue;
+} */
+
+/* .{}class selector #{}id selector >{}decendent selector *universal selector */
+
+.box{
+    background-color: antiquewhite;
+    width:180px;
+    height:180px;
+    border:2px solid black;
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin: 5px 5px 5px 5px; /*top right bottom left*/
+    padding: 5px;
+    transform: translate(50px);
+
+}
+
+
+/* font can be import by <link> by putting it into head tag &
+    also can be use by adding @import link in css (or) style tag */
+
+.text{
+    text-shadow: 1px 1px 1px rgb(94, 91, 91);    /*hori verti spread color*/
+}
+
+.back-to-top{
+    display: block;
+    position: absolute;
+    left: 90vw;
+    padding: 10px;
+
+}
+
+    /* position relative for move apni jagah se (aur) z-index fixing for uper/niche ,
+    &
+     position absolute for move parent relativeness adjustment */
+
+     /*  3exception also beheave like position:absolute; = transform:translate , filter:invert() , perspective:em; */
+
+
+
+    /* for media query must use meta name="viewport" content="width=device-width, initial-scale=1.0 */
+    @media only screen and (max-width:555px) {
+        body{
+            font-size:30px;
+            background-color: rgb(183, 117, 31);
+        }
+    }
+
+    /* if image is in container and images out from border then for fixing the border use
+        display:flow-root; */
+
+
+        /* float:left; means it will float on left
+           clear:both; it don't allow both side anything */

@@ -3,14 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    
+    <!-- link got from google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    
     <title>fonts in css</title>
 
     <style>
+
+        /* import url and style  or*/    /*link rel stylesheet and style ☝️ */
         /* @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
         p {   font-family: "Caveat", "sans-sarif";
         } */
@@ -23,23 +26,24 @@
         }
 
         h2 {
-            text-align: center;
-            text-transform: uppercase;
-            text-transform: lowercase;
-            text-decoration: underline;
-            text-decoration-color: red;
-            /* text-decoration-style: dotted; */
-            text-decoration-thickness: 7px;
-            /* text-indent: 45px; */
+            text-align: center;           /* for text align centre*/
+            text-transform: uppercase;    /* for text to uppercasse*/
+            text-transform: lowercase;    /* for text to lowercass*/
+            text-decoration: underline;   /* for text decoration underline*/
+            text-transform:capitalize;    /* for all text 1st letter capital*/
+            text-decoration-color: red; /* for text decoration color*/
+            /* text-decoration-style: dotted; */   /* for text decoration style*/
+            text-decoration-thickness: 7px;    /* for text decoration thickness*/
+            /* text-indent: 45px; */    /*  text written after this pixel */
         }
 
         .lorem {
             border: 2px solid red;
-            width: 45px;
-            height: 90px;
-            /* word-break: break-all; */
-            text-overflow: ellipsis;
-            overflow: hidden;
+            width: 45px;   /* lorem class width */
+            height: 90px;  /* lorem class height */
+            /*word-break: break-all; */        /*half word will show at end*/
+            text-overflow: ellipsis;      /*half word will dotted show at end & must have width in px & also must have overflow: hidden; */
+            overflow: hidden;    /*overflow of box will hide*/
 
         }
     </style>
@@ -50,7 +54,7 @@
         <h1>Fonts</h1>
         <h2>about fonts</h2>
         <p>this is a text on fonts</p>
-        <p> Lorem ipsum dolor sit amet consectetur,
+        <p> Lorem ipsum dolor Fit amet consectetur,
             adipisicing elit. Est, deleniti! Inventore ipsam modi,
             minima illo sit odio tempore? Quidem, atque. </p>
 

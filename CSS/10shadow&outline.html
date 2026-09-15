@@ -9,14 +9,17 @@
             border:2px solid black;
             padding:34px;
             /*box-shadow:5px 10px 22px 5px  #70a711 ; */  /*box-shadow: h-offset v-offset blur spread color inset;*/
-            box-shadow:inset 5px 10px 22px 5px  #70a711 ;   /*box-shadow: h-offset v-offset blur spread color inset;*/
+            box-shadow: 5px 20px 10px 5px  blue inset;   /*box-shadow: h-offset v-offset blur spread color inset;*/
+            
         }
         .text-element{
-            text-shadow: 3px 3px 4px #888888;
+            /* text-shadow: 3px 3px 4px #888888; */  /*  text-shadow: h-offset v-offset blur color; */
+            text-shadow: 2px 3px 4px #000000;
             border: 2px solid green;    /*border is inside and part of box model*/
             border-radius: 8px;       /*border radius & outline border radius will also adjust*/
-            outline: 2px solid black;     /*outline is outside of border and not involved in box model*/
+            outline: 2px solid black;     /*outline is outside of border and not involved in box model & its comes under margin area*/ 
             outline-offset: 10px;      /*distance between border and outline*/
+            background-color: red;
         }    
     </style>
 </head>

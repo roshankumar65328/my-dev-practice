@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Sizing </title>
     <style>
         * {
             margin: 0;    /*margin,paddng adjustment*/
@@ -16,12 +16,12 @@
         }
 
         .box {
-            box-sizing: border-box; /* given height for this section will (content+padding+border)*/
+            box-sizing: border-box; /* given height/width for this section will (border+content+padding)*/
             border: 2px solid black;  /*this section border*/
-            /* width: 2048px */         /*(apne screen ke liye not so useful) */
-            width: 80vw;              /* device width will 80% of the screen*/
-            height: 10vh;            /* device height will 10% of the screen*/
-            margin: auto;            /*jitna width height bacha hai wo adjust ho jayega */
+            /* width: 2048px */        /*(apne screen ke liye not so useful, it is different for different screen so use, vw & vh) */
+            width: 80vw;              /* this container width will 80% of the screen*/
+            height: 10vh;            /* this container height will 10% of the screen*/
+            margin: auto;           /*left and right margin equal automatic lag jayegi, contant will on center*/  /*element must be block level element for apply margin */
             background-color: aquamarine;   /*bg color */
         }
 
@@ -31,20 +31,21 @@
             /* width: 2048px;*/ 
             width: 80vw;      
             /* height: 80vh;*/
-            min-height: 80vh;    /*this section contain 80% of screen*/
+            min-height: 80vh;    /*this section contain 80% view height of screen of minimum height 80% & also allow expanding height if needed*/
             margin: 23px auto;   /*23px top margin other will auto */
             font-size: 18px;       /*font size for this */
             background-color: aquamarine;
         }
         .container > div{
-            font-size: 2em;     /*font size for this */
+            font-size: 2em;     /*font size will double of given font (container ka double 18px ka 36px ho gya) */
+            font-size: 2rem;    /*jitna isko root se milne wala hai uska into usually (16px * rem)  */
             border: 2px solid red;   /*border */
             width: 50%;     /*joisse container se mila hai uska 50% */
         }
 
         .container > div > div{
             border: 2px solid blue;
-            width: 50%;      /*container ke div ka 50% */
+            width: 50%;      /*container/parent ke width ka 50% , % can't everywhere */
         }
 
         .mycont{ 
@@ -53,8 +54,9 @@
             margin: 23px auto;
             color: rgb(0, 0, 0);
             font-size: 22px;
-            /* width: 100vmin; */
-            width: 80vw;
+            width: 100vmin;  /*laptop ke liye vmin hoti hai height, phone ke liye vmin hoti hai width, to vmin ka 100% ho jayega width*/
+            /* width: 100vh; */   /* same as previous line bacoz vmin & vh for laptop is same & same as for vmax */
+            /* width: 80vw; */
         }
     </style>
 </head>
@@ -70,12 +72,16 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus quia quod iste dolorem
             voluptatem fuga quidem aspernatur. Nihil ipsa sint quae, beatae explicabo saepe impedit laboriosam magni
             cupiditate expedita voluptates consequatur odit veritatis dolorum doloribus. Iure nemo odit dicta, delectus,
-            modi reiciendis maiores ut quo adipisci libero quam laboriosam nihil voluptate natus nobis earum ad?
+            modi reiciendis maiores ut quo adipisci libero quam laboriosam nihil voluptate natus nobis earum ad? Lorem 
+            ipsum dolor sit, amet consectetur adipisicing elit. Earum vero repellendus et officiis quae ipsum voluptatibus
+             cupiditate beatae? Dignissimos officiis maxime, voluptatum ad nostrum odio quia deserunt nemo, beatae commodi 
+             mollitia ab sequi earum minus? Soluta aliquam sapiente distinctio veritatis fugiat maiores iusto! Eveniet,
+              rem impedit vero aperiam magni fugit!
         
-        <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero omnis voluptas est aliquam, dolores rem laudantium nulla maiores odio fugit, totam voluptatem saepe!
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero omnis voluptas est aliquam, dolores rem laudantium nulla maiores odio fugit, totam voluptatem saepe!
+            </div>
         </div>
-    </div>
 
         <!-- Expand this to see that this container will adjust its height lorem999 -->
     </div>

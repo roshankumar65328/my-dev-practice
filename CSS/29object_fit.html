@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS object Fit and position</title>
+    <style>
+        .container {
+            height: 488px;
+            width: 466px;
+            border: 2px solid black;
+            background-clip: border-box;         /*background ke uper text content jo dalenge wo kitni jageh me ayega*/
+
+            background-image:url(roshan.jpg);
+            background-size: cover;               /*cover all space with zoom */
+            /* background-size: contain;               /*contain full photo adjust in small space with extra space */
+            opacity: 1;
+            background-position: center center;   /*for small image adjust on center*/
+            /* background-repeat: no-repeat;    /*if background img small then default repeat, for NO REPEAT*/
+        }
+
+        img {
+            width:  100%;
+            height: 100%;
+            /* object-fit: contain;       /*it will maintain image relevent width,height with extra empty space*/
+            object-fit: contain;           /*it will occupy all space with zoom image*/
+            /* object-fit: fill;            /*Default = streach original size & fix within container*/
+            /* object-position: 10px 20px;    /*create padding upper=20px, left=10px */
+            opacity: 0.4;
+            /* object-position: bottom right;   /*see image bottom right portion*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <img src="use_of_justify-content,align-content.jpg">
+    </div>
+</body>
+</html>

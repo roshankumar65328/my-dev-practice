@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100vh;      /* dhayan rahe jab locomotive lagaye tab main ko height / width nahi deni agar deni hai to vh / vw me deni hai */
+    width: 100vw;
+}
+.page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+}
+.page2{
+    height: 100vh;
+    width: 100vw;
+    background-color: yellow;
+}
+.page3{
+    height: 100vh;
+    width: 100vw;
+    background-color: pink;
+}
+.page2 .image{
+    height: 100vh;
+    width: 30vw;
+    position: relative;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.page2 .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

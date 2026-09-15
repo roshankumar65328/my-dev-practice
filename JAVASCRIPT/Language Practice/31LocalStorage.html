@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Store a Variable in browser's LocalStorage </title>
+</head>
+<body>
+    
+    <script>
+        
+        // yaha if_else laga hai , if local storage has name with value it will print, if name is null or empty it will ask the name
+
+        // we can store string only in browser, 
+        // if we want to store object in browser console  
+        // we have to convert it into string & store it
+        // when we need that object, we can parse the string-> object
+        
+        if(localStorage.getItem("name")!= "null"){
+                let a = localStorage.getItem("name")
+                document.write("Welcome "+ a)
+            }
+            else{
+                    let a = prompt("enter your name")
+                    localStorage.setItem("name",a);
+                    document.write("Welcome ", a)
+                }
+                
+                
+                
+        // write this on console
+        // r = {
+        // "roshan":1,
+        // "rohan":2,
+        // "noni":3,
+        // "nino":4
+        // }
+        // localStorage.setItem("data1", JSON.stringify(r))    // r(object) ko JSON.stringify se string me convert kiya fir usse save kiya
+        // localStorage.getItem("data1")    // fir get data se maang liya
+        // console.log(localStorage.getItem("data1"));   // uss data ko console kara liya
+
+
+        // // parse again into object
+        // JSON.parse(localStorage.getItem("data1"))
+
+
+            
+        // we can also remove data from localStorage
+        // localStorage.remmoveItem("variable")
+
+        // clear all data from localStorage
+        // localStorage.clear()
+
+    </script>
+</body>
+</html>

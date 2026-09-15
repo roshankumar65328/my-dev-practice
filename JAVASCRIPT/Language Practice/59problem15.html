@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>59 Problem 15</title>
+    <style>
+        .button-cont{
+            width: 150px;
+            height: 40px;
+            position: relative;
+        }
+        .tooltip-btn{
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            color:white;
+            font-size: 16px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            margin: 3vw;
+            
+            
+        }
+        .tooltip{
+            width: 100%;
+            height: 45%;
+            background-color: rgb(107, 246, 109);
+            position: absolute;
+            /* top: 34px; */
+            margin: 3vw;
+            top: -22px;
+            left: 0;
+            border-radius: 10px;
+            font-size: 12px;
+            text-indent: 10px;
+            padding-top: 2px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- custom tooltip -->
+
+    <div class="button-cont">
+        <button class="tooltip-btn">hover for tooltip</button>
+        <div class="tooltip">this is tooltip</div>
+    </div>
+
+    <script type="module" src="59problem15.js"></script>
+</body>
+</html>

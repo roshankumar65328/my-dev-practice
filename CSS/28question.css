@@ -1,0 +1,128 @@
+.logo {
+    width: 90px;
+    height: 35px;
+    background-color: blue;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right ul {
+    display: flex;
+}
+
+.right ul li {
+    list-style: none;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right {
+    justify-content: center;
+}
+
+.right ul li span {
+    padding: 1px;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    margin: 70px;
+    font-family: sans-serif;
+}
+
+.first span {
+    font-size: 40px;
+    gap: 30px;
+}
+
+section span img {
+    width: 70px;
+    height: 30px;
+    padding: 0px 23px;
+}
+
+.first p {
+    font-size: 23px;
+    width: 44vw;
+    text-align: center;
+}
+
+.btn {
+    background-color: rgb(84, 143, 232);
+    padding: 14px 16px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    margin:12px 0;
+    cursor:pointer;
+}
+
+.btn a{
+    text-decoration: none;
+    color:white;
+}
+
+.second {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* or */
+    max-width:50vw;
+    margin:auto;
+
+    /* background-color: rgb(207, 152, 152); */
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid template rows nhi diya wo content ke hisab se adjust ho jayega */
+    gap:12px;
+}
+
+.green {
+    background-color: rgb(38, 208, 38);
+}
+
+.item{
+    padding:23px;
+    background-color: rgb(234, 232, 232);
+    border-radius: 12px;
+    font-size: 20px;
+    text-align: center; 
+}
+
+.item-lang{
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.download :nth-child(2){
+    font-size:23px;
+    padding:0px 8px;
+}
+
+.download{
+    display:flex;
+    /* justify-content:center; */
+    align-items:center;
+}
+
+@media screen and (max-width:1150px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}

@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    padding: 8px;
+}
+
+.tabs{
+    display: flex;
+}
+
+.tab{
+    padding: 12px 18px;
+    background-color: #dadada;
+    border-radius: 4px;
+    border:2px solid black;
+}
+
+h3{
+    display: none;
+}

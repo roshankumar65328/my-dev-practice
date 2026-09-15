@@ -7,6 +7,24 @@
     <title>Specificity</title>
     <style>
         /* specificity means if we design same text or things 2+ times with differernt color then which will apply */
+        /* the cascading algorithm */
+        /* cascading algorithm is using for solving conflict where multiple css rules are apply to html element */
+        /* 1. Position and Order Of Appearness 
+              The order in which multiple same css rule apply
+           2. Specificity
+              algorithm that determine which css selector has strongest match
+              inline style > ID Selector > Class or Attribute Selector > element selector > Universal Selector 
+
+              Specificity Calculation 
+              * universal selector: 0
+              * element selector and pseudo element selector : 1
+              * class, attribute selector, pseudo-class selector : 10 
+              * ID selector: 100
+              * Inline style: 1000
+           3. Origin 
+              css came from browser is called "user agent Stylesheet", developer override the browser owned stylesheet
+           4. Important 
+              some css specificity rule are weighted than other, Important is gretest than all */
 
         /* The specificity of this element selector is 1  */
         h1 {
@@ -34,8 +52,11 @@
         }
 
         /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
-        a.harryclass.rohan-class[href]:hover {
+        a.harryclass.rohan-class[href]:hover {   /*a elemen 1, .harryclass 10, rohan-class 10, [href] 10, :hover 10 = 41*/
             color: blueviolet;
+        }
+        h1{
+            color: skyblue !important;   
         }
     </style>
 </head>

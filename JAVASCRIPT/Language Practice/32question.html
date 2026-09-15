@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> add note to local storage </title>
+</head>
+<body>
+    <button>Add Note</button>    
+    <div class="note"></div>
+
+    <!-- <script>
+        function saveNoteToLocalStorage(note){
+            localStorage.setItem("note",note)
+        }
+
+
+        document.querySelector("button").addEventListener("click", ()=>{
+            let note = prompt("Enter Your Note Here")
+            saveNoteToLocalStorage(note)
+            document.querySelector(".note").innerHTML = note
+        })
+    </script> -->
+
+    <script>
+    function saveNoteToLocalStorage(note) {
+        let notes = localStorage.getItem("notes");  // agar pehle se notes exist karte hain to wo string return karega, nahi to null return karega
+        notes = notes ? JSON.parse(notes) : []   // notes variable pehle se hai to usse parse karke do kyuki hum usme push kar denge new note ko, agar nahi hai to new empty array bna do taaki usme new note add kar sake
+        // or 
+        // if(notes){
+        //     notes = JSON.parse(notes)
+        // }else{
+        //     notes = []
+        // }
+        notes.push(note)   // jo main notes variable maintain kar rahe hai usme new note add kar do
+        localStorage.setItem("notes", JSON.stringify(notes))   // current updated notes array ko local storage me save kar do, with stringify bcoz string me hi leta hai local storage
+    }
+
+    function showNotes() {
+        let notes = localStorage.getItem("notes")
+        notes = notes ? JSON.parse(notes) : []   // page load pe bhi notes dikhana h, agar notes exist karte hain to unhe parse karke do, nahi to empty array do
+        // or 
+        // if(notes){
+        //     notes = JSON.parse(notes)
+        // }else{
+        //     notes = []
+        // }
+        let noteDiv = document.querySelector(".note")   
+        noteDiv.innerHTML = ""
+        notes.forEach((n, index) => {
+            noteDiv.innerHTML += `<p>${index + 1}. ${n}</p>`
+        })
+    }
+
+    document.querySelector("button").addEventListener("click", () => {
+        let note = prompt("Enter Your Note Here")
+        if (note) {
+            saveNoteToLocalStorage(note)
+            showNotes()
+        }
+    })
+
+    // Page load pe bhi notes dikhao
+    showNotes()
+</script>
+</body>
+</html>

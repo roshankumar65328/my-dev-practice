@@ -1,0 +1,37 @@
+.container{
+    padding: 8vw 15vw;
+    text-align: center;
+}
+
+input{
+    width:80%;
+    height:40px;
+    border-radius: 12px;
+    border:2px solid rgb(116, 112, 112);
+    outline-color: royalblue;
+    font-size: 18px;
+}
+
+img{
+    height:120px;
+    width:120px;
+    object-fit: cover;
+    padding: 10px 20px;
+    object-position: left;
+    border-radius: 50%;
+}
+
+.person{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.people{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+

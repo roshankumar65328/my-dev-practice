@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+             display: flow-root;    /*for maintaining proper border specially for image use float-root;*/
+        }
+        
+        img{
+            float:left;    /*for fixing the image at left or right with allow text on other side(ex- if float:left than it allow text at right) */
+        }
+
+        .card{
+            border: 2px solid red;
+        }
+
+        .card:nth-child(3){    /*it also count the img tag without card class*/   /*kisi bhi parent ke andar .card matlab class card 3rd no. par hoga to ye properties apply hogi */
+            background-color: aqua;
+            clear:both;    /*for aquaring whole space with restriction no permission for imege to set itself at left or right*/
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="roshan.jpg" alt="" width="230" height="170">
+
+        <div class="card">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi fugiat ab tenetur praesentium sequi, nisi nesciunt officiis 
+                magnam ut at voluptatibus sapiente ducimus deleniti esse alias nihil. Soluta iure ipsum voluptatibus assumenda ratione ut?</p>
+        </div>
+
+        <div class="card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore explicabo dignissimos 
+            a et sapiente sunt assumenda cupiditate veniam cumque ipsa? Autem quod, id itaque velit cupiditate ea quia 
+            sit laudantium asperiores. Culpa fuga libero odio consequatur et totam ratione tempore eos ipsum, soluta omnis
+            , fugiat facere? Quam neque a pariatur debitis quos vero maiores, porro, voluptatum earum corporis deserunt dolore 
+            ipsa! Explicabo ea ipsum possimus fugiat accusantium, incidunt ducimus. Assumenda nulla beatae dolores, recusandae 
+            voluptates non dolorem ut, obcaecati minus ducimus officiis in impedit. Quas cupiditate totam quis.
+        </div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>

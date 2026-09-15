@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+
+        .img1 {
+            filter: blur(2px);
+        }
+
+        .img2 {
+            filter: brightness(200%);
+        }
+
+        .img3 {
+            /* filter: contrast(200%); */
+            /* filter: grayscale(100%); */
+            /* filter: hue-rotate(100deg); */
+            /* filter: invert(1); */
+            /* filter: opacity(0.4); */
+            /* filter: saturate(3); */
+            /* filter: sepia(100%); */
+            /* filter: drop-shadow(right bottom blur color); */
+            filter: drop-shadow(0px 0px 10px blue );
+            
+            /* ek img me ek baar hi filter laga sakte h, for multiple filter use */
+            /* filter:grayscale(100%) opacity(0.5); */
+        }
+    </style>
+</head>
+
+<body>
+    <img width="500" class="img1" src="roshan.jpg" alt="">
+    <img width="500" class="img2" src="roshan.jpg" alt="">
+    <img width="500" class="img3" src="roshan.jpg" alt="">
+</body>
+
+</html>

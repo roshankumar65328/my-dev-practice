@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>56 Problem 12</title> 
+    <style>
+        .container{
+            width: 100%;
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .person{
+            width: 15vw;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .person .image{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            /* border-radius: 50%; */
+            /* object-fit: cover; */
+            /* margin: 3px 4px; */
+            background-color: aqua;
+            overflow: hidden;
+        }
+        .image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .person p{
+            margin-top: 0px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
+</head> 
+<body>
+    <!-- ek button banao and us button ke click par apko ek user leker aana hai 
+    random tareeke se(random api se) and ussey add karna hai dom mein -->
+    <button class="add-btn">Add person</button>
+    <div class="container">
+        <div class="person">
+            <div class="image">
+                <img src="zimage2.jpg" alt="">
+            </div>
+            <h3 class="name">Roshan</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus eligendi quidem mollitia, incidunt amet eius facilis temporibus deserunt officiis quos.</p>
+        </div>
+       
+    </div>
+    <script src="56problem12.js"></script>
+</body>
+</html>

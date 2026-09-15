@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid 3rd method for understanding with fraction</title>
+    <style>
+        .container{
+            width:80vw;
+            height:90vh;
+            border:2px solid black;
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            /*or*/
+            /* grid-template-columns:repeat(3,1fr); */
+            
+            /* grid-template-columns:repeat(4,minmax(100px,1fr));  /* minimum 100px and maximum 1fr */
+            /* grid-template-columns:1fr 1fr 2fr; */
+            gap:30px;
+            /* or*/
+            /* row-gap: 30px;
+            column-gap:30px; */
+            /*gap:30px 40px;       /* for row, column gap combo */
+
+
+            justify-items: center;      /*for main axis center/left/right*/  /*this is grid, here not used display:flex*/
+            align-items: center;        /*for cross axis center*/  
+
+
+        }
+        .items{
+            border:2px solid red;
+            height:55px;
+            width:55px;
+        }
+
+         /*for manipulating perticular grid in gridbox*/
+         .item-2{
+            align-self: start;      /*for cross axis movement & jis axis me box lag rhe h uske opposite me*/
+            /* justify-self: start; */   /*for main axis movement & jis axis me box lag rhe hai*/
+         }
+
+
+         /*jab bade container me grid items ke group ko move karana ho to "content" use hoga */
+         /* justify-content:left*/       /*ye poore grid ko move karayega jab page me khali space hoga. on main axis*/
+         /* align-content:left */       /*ye poore grid ko move karayega jab page me khali space hoga. on cross axis*/
+
+         /*jab grid ke cell ke ander hi move karana ho tab items use hoga*/
+         /* align-items:left*/
+         /* justify-items:left */
+
+         /*for use both (align-content:center;  and  justify-content:center; use place-content)   */
+         /* place-content:center; */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item-1">1</div>
+        <div class="items item-2">2</div>
+        <div class="items item-3">3</div>
+        <div class="items item-4">4</div>
+        <div class="items item-5">5</div>
+        <div class="items item-6">6</div>
+    </div>
+
+    <div class="image">
+        <img src="use_of_justify-content,align-content.jpg" height="355" alt="grid understanding">
+    </div>
+</body>
+</html>

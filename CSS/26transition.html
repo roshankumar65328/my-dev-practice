@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition in css</title>
+    <style>
+        .container {
+            background-color: orange;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box {
+            background-color: aqua;
+            width: 5vw;
+            height: 4vh;
+            /* transition properties */
+            /* transition-property: transform;  /*only for transform property*/
+            /* for 2,3 property like transform,background-color use this */
+            /* transition-property: transform, background-color; */
+            
+            /* transition-property: all;     /* for apply all property like trasform,... use all  */
+            /* transition-duration: 3s;     /*for transition time*/
+            /* transition-timing-function:ease-in-out;  /*transition time movement*/
+            /* transition-delay: 1s;   /*delay to apply transition*/
+            /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */    /*inspect, transition timing function*/
+
+            /* for apply all 4 properties in single line*/
+            transition: all 3s ease-in-out 1s;    /*transition:property duration timing-function delay*/
+        }
+
+        .container:hover .box {
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

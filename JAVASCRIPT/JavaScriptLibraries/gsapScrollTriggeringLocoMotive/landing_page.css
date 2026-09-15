@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: black;
+    color:white;
+    font-family: "Noto Sans", sans-serif;;
+    font-weight: 100;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8vw 0px 8vw;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.nav-part2{
+    display: flex;
+    gap:0px 3vw;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    font-size: 4.5vw;
+    font-weight: 400;
+    font-family: open sans;
+    line-height: 10.2vw;
+    text-transform: uppercase;
+    width: 90%;
+    letter-spacing: -7px;
+    padding-left: 7%;
+    padding-top: 5vw;
+    position: relative;
+    z-index: 10;
+    color: linear-gradient(to right, white, gray);
+}
+
+
+.hero h1:nth-child(1){
+    padding-left: 2vw;
+}
+.hero h1:nth-child(2){
+        padding-left: 18vw;
+
+}
+.hero h1:nth-child(3){
+        padding-left: 35vw;
+
+}
+.heroimg:nth-child(1){
+    object-fit: cover;
+}
+.heroimg img{
+    position: absolute;
+    top:7vw;
+    left: 70%;
+}
+.img1{
+    rotate: 3deg;
+}
+.img2{
+    rotate: 5deg;
+}
+.img3{
+    rotate: 0deg;
+}
+
+
+.page2{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* border: 5px solid white; */
+    border-radius: 5px;
+}
+.page2 img {
+    height: 100%;
+    width: 20%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    object-fit: cover;
+    object-position: center;
+}
+
+.blank{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}

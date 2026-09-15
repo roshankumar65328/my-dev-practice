@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /*  .box(class) jaha bhi first child hoga uspe apply hoga*/
+        /* .box:first-child{       
+            background-color: red;
+        } */
+
+        /*box class ke ander first line*/   /* pseudo element selector specificity value = 1 */
+        /* .box::first-line{
+            color: yellow;
+        } */
+
+        /*boxes class ke ander universal sab kuch*/
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+
+        p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
+        } */
+
+        /*sab box class me odd ya even ko select karna*/  /* counting starts from 1 */
+        /* .box:nth-child(odd){
+            background-color: blue;
+        } */
+
+        /*box class jaha bhi 2nd no. pe hoga*/
+        /* .box:nth-child(2){
+            background-color: blue;
+        } */
+
+        /*box class last se 2nd no. pe jaha bhi hoga*/
+        /* .box:nth-last-child(2){
+            background-color: red;
+        } */
+
+        /*.boxes class me usse just pehle kuch add karna*/     /* pseudo element selector specificity value = 1 */
+        .boxes::before {
+            content: "i am good";
+            color: blue;
+        }
+
+        /*.boxes class me usse just baad kuch add karna*/
+        .boxes::after {
+            content: "This course is also good";
+            color: red;
+        }
+
+        /*when we select text in webpage*/
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+
+        /*.box class me first letter*/
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+        }
+
+        /*input tag ko manipulate karna*/
+        input::placeholder {
+            color: rgb(84, 84, 188);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="boxe">I am first box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>
