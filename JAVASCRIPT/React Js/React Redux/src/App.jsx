@@ -5,7 +5,7 @@ import { increment,decrement, incrementByAmount, incrementAsync } from "./reduce
 function App(){
 
   const {value} = useSelector((state) => state.counter);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();     // useDispatch = Redux store ko bolna ki "ye kaam karo / ye data update karo."
 
   return (
   <div className="w-full h-screen padding-box bg-zinc-300 p-2 text-center">

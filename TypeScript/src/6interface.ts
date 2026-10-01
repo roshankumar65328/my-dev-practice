@@ -49,3 +49,8 @@ class Chai implements CupSize {
 }
 
 // normally dekha jaye to function me hum type use karte hai, aur class me interface use karte hai
+
+interface Response {ok: true} | {ok: false}
+class myRes implements Response{
+    ok: boolean = true;
+}
