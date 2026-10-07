@@ -35,3 +35,47 @@ userInfo = ["Roshan", 100, true];
 const location: readonly [number, number] = [28.66, 32.22];
 
 const chaiItems: [name: string, price: number] = ["Masala", 25];
+
+
+enum CupSize {
+    SMALL,      // enum ki value capital me hi hote hai generally, aur ye sirf limited options provide karte hai
+    MEDIUM,
+    LARGE
+}
+
+const size = CupSize.LARGE  // ye Cupsize se suggestion dega
+
+enum Status {
+    PENDING = 100,
+    SERVED,  // 101
+    CANCELLED, // 102
+}
+
+enum ChaiType {
+    MASALA = "masala",
+    GINGER = "ginger"
+}
+function makeChai(type: ChaiType){
+    console.log(`Making: ${type}`);
+}
+
+makeChai(ChaiType.GINGER)
+// makeChai("masala")   // we can't do like this
+
+
+// enum RandomEnum {    // practically enum string hi ho dono taraf / ya number ho dono taraf
+//     ID = 1,
+//     NAME = "chai"
+// }
+
+// const enum Sugars {    // aise bhi kar sakte hai
+//     LOW = 1,
+//     MEDIUM = 2,
+//     HIGH = 3
+// }
+
+// const s = Sugars.HIGH
+
+
+let t: [string, number] = ["chai", 10]
+t.push("extra")
