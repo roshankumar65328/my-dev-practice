@@ -8,6 +8,7 @@
     <style>
         .container {
             border: 2px solid red;
+            padding: 10px;
             display: flex;    /*for content flexing in direction (default = top to botton) (flex = left to right)*/
             
             height: 80vh;
@@ -41,7 +42,9 @@
             /*flex-direction: column-reverse;     /*jaise box lagna tha waise hi ulta lag jayenge*/
 
             flex-wrap: wrap;      /*if align horizontal if boxes is extra than it will wrap down automatically, with maintain box width/height */
-            /*align-content: center;      /*space fixing of multiple line content in flexbox use align-content: */
+            
+            /* apply on flex chidrens */
+            /* align-content: center;      /*space fixing of multiple line contents in flexbox use align-content: on cross axis*/
             /* align-content: flex-start; */     /*space fixing of multiple line content in flexbox use align-content: */
             /* align-content: flex-end; */     /*space fixing of multiple line content in flexbox use align-content: */
 

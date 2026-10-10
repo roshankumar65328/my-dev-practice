@@ -8,9 +8,9 @@
     <style>
         /* specificity means if we design same text or things 2+ times with differernt color then which will apply */
         /* the cascading algorithm */
-        /* cascading algorithm is using for solving conflict where multiple css rules are apply to html element */
+        /* cascading algorithm is using for solving conflict where multiple css rules are apply to same html element */
         /* 1. Position and Order Of Appearness 
-              The order in which multiple same css rule apply
+              The order in which multiple css rule apply
            2. Specificity
               algorithm that determine which css selector has strongest match
               inline style > ID Selector > Class or Attribute Selector > element selector > Universal Selector 
@@ -68,3 +68,25 @@
 </body>
 
 </html>
+
+
+
+Important pseudo-elements
+
+::before  ->  Element ke content se pehle virtual content add karta hai.
+::after  ->  Element ke content ke baad virtual content add karta hai.
+::first-letter  ->  Text ke pehle letter ko style karta hai.
+::first-line  ->  Text ki pehli line ko style karta hai.
+::selection  ->  User ke select kiye text ko style karta hai.
+::placeholder  ->  Input ke placeholder text ko style karta hai.
+
+Important pseudo-classes
+
+:hover  ->  Mouse element par aane par.
+:active  ->  Element ko click/press karte samay.
+:focus  ->  Input select ya focus hone par.
+:first-child  ->  Apne parent ka pehla child.
+:last-child  ->  Apne parent ka aakhri child.
+:nth-child(2)  ->  Parent ka doosra child.
+:checked  ->  Checked checkbox ya radio.
+:disabled  ->  Disabled form element

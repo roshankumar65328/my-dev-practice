@@ -30,7 +30,7 @@
             /* right:40px; */      /*right se left jayega*/
 
             /* position absolute find the nearest parent or grandparent that is positioned with relative/absoute/fixed/sticky element, the movement of top,bottom,left,right will from that positioned parent element  */
-            /* position:absolute;     [ye to absolute hoga hi, iska jo parent absolute hoga uske according position lagegi] */
+            /* position:absolute; */   /*  [ye to absolute hoga hi, iska jo parent absolute hoga uske according position lagegi] */
             /* top:10px; */           /* [ye to absolute hoga hi, iska jo parent absolute hoga uske according position lagegi] */
             /* bottom:10px; */
             /* left:3px; */
@@ -67,7 +67,7 @@
             margin:20px;
             border:2px solid purple;
 
-            /* for absolute make the first parent absolute */
+            /* for absolute make the first parent absolute/relative */
             /* position:absolute; */
             /* Exeption-> translate, filter, or perspective properties can also make an element appear as positioned */
             /* position:absolute; */
@@ -89,3 +89,14 @@
 </body>
 
 </html>
+
+
+<!-- 
+1. position: fixed
+fixed element ko browser ki screen (viewport) ke relative fix kar deta hai. Page ko kitna bhi scroll kar lo, element usi position par rehta hai.
+
+2. position: sticky
+sticky element pehle normal page flow mein rehta hai. Jab scroll karte hue woh specified position, jaise top: 0, par pahunchta hai, tab woh wahan chipak jata hai. 
+
+-->
+
