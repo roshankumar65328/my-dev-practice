@@ -11,12 +11,12 @@
 
 .box {
   width: calc(20%);
+  line-height: 130px;
   margin: 20px 20px;
-  background: #ddd;
+  background: #ddd;    /* Shorthand property hai; color ke saath image, position, repeat aur doosri background settings bhi set kar sakti hai. */
   cursor: pointer;
   color: #FFF;
   text-align: center;
-  line-height: 130px;
 }
 
 
