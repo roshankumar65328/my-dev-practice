@@ -61,5 +61,6 @@ let pq = {
     }
 }
 console.log(pq);
+console.log(pq.b(3,3));
 
 

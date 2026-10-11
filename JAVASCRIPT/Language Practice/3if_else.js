@@ -1,4 +1,4 @@
-console.log("Hello this is consitional code")
+console.log("Hello this is conditional code")
 
 let num = 1;
 let grace = 2;

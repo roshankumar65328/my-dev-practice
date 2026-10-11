@@ -110,16 +110,17 @@ section span img {
     padding-bottom: 32px;
 }
 
-.download :nth-child(2){
-    font-size:23px;
-    padding:0px 8px;
-}
-
 .download{
     display:flex;
     /* justify-content:center; */
     align-items:center;
 }
+
+.download :nth-child(2){
+    font-size:23px;
+    padding:0px 8px;
+}
+
 
 @media screen and (max-width:1150px){
     .grid{
