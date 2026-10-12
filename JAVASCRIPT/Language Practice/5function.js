@@ -57,7 +57,7 @@ let func2 = ((e) =>{
 func2(3)
 
 
-// Arrow Function in a 
+// Arrow Function in such a way  
 // let func3 = (if passing value)=>{}
 // let func4 = ()=>{}
 // let func5 = ()=>{}

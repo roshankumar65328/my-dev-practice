@@ -41,17 +41,17 @@ let t = a1.concat(a2)     //  it will concanate the array
 console.log(typeof(t));   // object
 console.log(a1.concat(a2,a3));    //   [1,2,3,4,5,6,7,8,9]
 let z = console.log(a1.concat(a2,a3));    //   [1,2,3,4,5,6,7,8,9]
-console.log(typeof(z));    // undefined , console laga h iss liye, normally object hi h
+console.log(typeof(z));    // undefined ,lekin z ki declaration me console laga h iss liye, warna normally to object hi h
 
 let a5 = [70,60,40,10,35,99]
-a5.sort()     // it sort the array 
+a5.sort()     // it sort the original array 
 console.log(a5)
 
 
 
 let numbers = [1,2,3,4,5]
-// console.log(numbers.slice(0,3))   // slice(0,3) 0 index se 3 index tak, 3 not included, not edit in original array 
-// console.log(numbers)     //  = 1,2,3
+console.log(numbers.slice(0,3))   // slice(0,3) 0 index se 3 index tak, 3 not included, not edit in original array, ye original me change nahi karta 
+console.log(numbers)     //  = 1,2,3,4,5
 
 // numbers.splice(0,3)         // splice(0,3) 0 se start 3 matlab 3 digit delete karga, it change in original array, isse console kiya to ye jo delete kr rha h wo de dega 
 // console.log(numbers)     // = 4,5
