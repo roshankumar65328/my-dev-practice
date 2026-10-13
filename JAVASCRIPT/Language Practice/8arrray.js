@@ -50,11 +50,11 @@ console.log(a5)
 
 
 let numbers = [1,2,3,4,5]
-console.log(numbers.slice(0,3))   // slice(0,3) 0 index se 3 index tak, 3 not included, not edit in original array, ye original me change nahi karta 
-console.log(numbers)     //  = 1,2,3,4,5
+// console.log(numbers.slice(0,3))   // slice(0,3) 0 index se 3 index tak, 3 not included, not edit in original array, ye original me change nahi karta 
+// console.log(numbers)     //  = 1,2,3,4,5
 
 // numbers.splice(0,3)         // splice(0,3) 0 se start 3 matlab 3 digit delete karga, it change in original array, isse console kiya to ye jo delete kr rha h wo de dega 
-// console.log(numbers)     // = 4,5
+// console.log(numbers)     // = 4,5   // number me 4,5 hi reh gaye
 
 numbers.splice(1,2,6,8)     // in splice we delete or add values sumulteneously
 console.log(numbers)        // 2,3 katega & 6,8 uski jagah add kr dega

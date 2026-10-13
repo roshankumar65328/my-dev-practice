@@ -1,7 +1,7 @@
 console.log("roshan")
 
 // write this on console for result of this 
-document.body.childNodes   //chilNodes me blank text & sare body ke child wale tag dega
+document.body.childNodes   //chilNodes me blank text & saare body ke child wale tag dega
 document.body.children   //children me sirf html tag count hoga
 document.body.firstElementChild  // ye bhi first html tag ko hi target karega
 document.body.firstElementChild.childNodes   // will show the text with html tags
@@ -39,5 +39,5 @@ document.body.firstElementChild.children[3].nextElementSibling   // it count onl
 
 document.body.firstElementChild.children[3].parentElement   // parent element dega
 
-document.body.children[1]   // direct body de childeren[1] dega
+document.body.children[1]   // direct body se childeren[1] dega
 console.log(document.body.children[1].rows)   // children[1] rows dega 
