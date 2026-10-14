@@ -18,6 +18,7 @@ function getRandomColor(){
     let val1 = Math.ceil(0+ Math.random()* 255);    // Math.ceil hame decimal nhi deta
     let val2 = Math.ceil(0+ Math.random()* 255);
     let val3 = Math.ceil(0+ Math.random()* 255);
+    // let val3 = Number(0+ Math.random()* 255);    // Number(3.4) -> 3
     return `rgb(${val1}, ${val2}, ${val3})`
 }
 

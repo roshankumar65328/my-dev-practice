@@ -8,7 +8,7 @@ let button1 = document.getElementById("btn")
 // https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events
 
 button1.addEventListener("dblclick", ()=>{
-    document.querySelector(".box").innerHTML = "<b>you were clicked by (.btn)</b> enjoy your click "
+    document.querySelector(".box").innerHTML = "you were <b>double clicked by (.btn)</b> enjoy your click "
 })
 
 // button1.addEventListener("mouseover", ()=>{
@@ -37,8 +37,8 @@ document.addEventListener("keydown",(e)=>{
 })
 
 
-// this will print the mouse movement information on the console
-document.querySelector("body").addEventListener("mousemove", function(dets){
+// this will print the mouse movement information on the console, dont't panic it's working fine but but in console with touchpad it's pretending like not working but exit console and move mouse and then go to console then see the keypoints of your moved movement
+document.addEventListener("mousemove", function(dets){
     console.log(dets.clientX)
 });
 

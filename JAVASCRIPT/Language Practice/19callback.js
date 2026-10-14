@@ -3,7 +3,7 @@
 // ek function jo function ko argument me le, aur uss argument fn ko apne hisab se chalaye = callback
 
 console.log("roshan is a software engineer")
-console.log("roshan is becoming success software engineer")
+console.log("roshan is becoming a success software engineer")
 
 
 // callback function, in which a fuction is given to another function as parameter/argument

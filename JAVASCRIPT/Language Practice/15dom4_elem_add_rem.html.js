@@ -25,18 +25,18 @@ console.log(document.querySelector(".box").innerText)     // pehla .box ke ander
 // document.querySelector(".boxe").innerHTML = "it has been updated by using dom"
 // 'it has been updated by using dom'
 // document.querySelector(".boxe").hasAttribute("style")   // hasAttribute checks for the attribute
-// false
+// true
 // document.querySelector(".boxe").getAttribute("style")
-// null
+// 'background-color: lightsalmon;'
 // document.querySelector(".boxe").setAttribute("style","display:inline")
-// it give "undefined"  but it set the attribute inline
+// it give "undefined"  but it will set the attribute inline
 
 // document.querySelector(".boxe").attributes
 // NamedNodeMap {0: class, 1: style, class: class, style: style, length: 2}
 
 // document.querySelector(".boxe").removeAttribute("style")  // this will remove the attribute
+// it give "undefined"  but it will remove the attribute 
 
-// undefined
 // document.querySelector(".box").dataset    // dataset jo attributes data- se start h unka object dega
 // DOMStringMap {}   // it give DomStringMap with Prototype
 
