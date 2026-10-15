@@ -55,7 +55,7 @@ main()
 
 // Axios (or other HTTP Libraries) - same as (fetch), it is more friendy to developer
 // first we have to get axios cdn from internet, html file me script tag se pehle attach karni hai
-// axios.get(`https://randomuser.me/api/`)    // ye data layega, radable form me
+// axios.get(`https://randomuser.me/api/`)    // ye data layega, readable form me
 // .then(result => console.log(result.data.results[0]))    //  axios me data direct redable form me aata hai
 
 

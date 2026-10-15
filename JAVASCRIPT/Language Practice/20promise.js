@@ -2,7 +2,7 @@ console.log("script is running....")
 
 // Promise = Promise of code/fn execution with defines the code/fn is rejected or resolved
 // aisa fn jisme ye ho to resolve krna, ye ho to reject krna 
-// promise ka code banate hi apne aap chal jata hai to agar, agar jaba chahe tab chale to promise ko function me daal do -_-
+// promise ka code banate hi apne aap chal jata hai to agar, agar jab chahe tab chale to promise ko function me daal do -_-
 // jab tak function ko call nahi karenge promise nhi chalegi
 
 // let promiseDemo = new Promise((resolve, reject)=>{
@@ -116,12 +116,12 @@ let promise4 = new Promise((resolve,reject)=>{
 
 
 // it tries to show promise is success executed
-// let p = Promise.resolve([promise1,promise2,promise3,promise4])
-// p.then((a)=>{      //after this promise  then
-//     console.log(a)   // ek array to dega hi , jisme solve wale ka promise{fulfilled:resolve("msg")}, reject wale ka rejected
-// }).catch(err=>{    //if error comes then, error show with usually red format
-//     console.log(err);
-// })
+let p = Promise.resolve([promise1,promise2,promise3,promise4])
+p.then((a)=>{      //after this promise  then
+    console.log(a)   // ek array to dega hi , jisme solve wale ka promise{fulfilled:resolve("msg")}, reject wale ka rejected
+}).catch(err=>{    //if error comes then, error show with usually red format
+    console.log(err);
+})
 
 
 // Promise.resolve()  ->  ek resolve promise return karega

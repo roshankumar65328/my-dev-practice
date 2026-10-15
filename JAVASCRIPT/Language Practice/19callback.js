@@ -54,12 +54,12 @@ getData("https://randomuser.me/api/", function(result){
 
 
 // ek time ke baad ye chal jayega
-setTimeout(()=>{
-    console.log("i am inside setTimeout 1")
-}, 1000)  // 1 second ke baad
+// setTimeout(()=>{
+//     console.log("i am inside setTimeout 1")
+// }, 1000)  // 1 second ke baad
 
-setTimeout(()=>{
-    console.log("i am inside setTimeout 2")
-}, 2000)
+// setTimeout(()=>{
+//     console.log("i am inside setTimeout 2")
+// }, 2000)
 
-console.log("console text after this setTimeout declaration")  // par console pehle chal jayega kyuki await thodi hai isme bhai sahab
+// console.log("console text after this setTimeout declaration")  // par console pehle chal jayega kyuki await thodi hai isme bhai sahab
