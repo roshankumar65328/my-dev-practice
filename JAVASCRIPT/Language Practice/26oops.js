@@ -133,7 +133,7 @@ console.log(l);
 l.eats();
 
 // write on console
-// l instanceof Lion        // true
+// l instanceof Lion        // true , kya l Lion Class se bana hai
 // l instanceOf Animal      // true
 
 
@@ -149,6 +149,8 @@ l.eats();
 // }
 // i.__proto__ = j;
 // console.log(i.d);
+// console.log(i);
+
 
 // class Animal1 {
 //     constructor(name, age, bread){
