@@ -1,7 +1,7 @@
 class User {
     constructor(name){
         // invoke the setter
-        this.name = name;   // ab jo hum user ko argument denge wo banega name
+        this.name = name;   // user new obj banayega and constructor name variable set karega, fir set name() chalega kyuki niche set name() function define hai, this.name hi setter ko chalata hai
     }
 
     get name(){   // getter setup , getter read the value
@@ -14,7 +14,7 @@ class User {
             console.log('Name is too short.');
             return;
         }
-        this._name = value;
+        this._name = value; 
     }
 }
 
@@ -22,10 +22,11 @@ let user = new User("Noni") // user object ban gaya, constructor me this.name = 
 console.log(user.name);    // get() getter chalayega, Noni aayega console me
 // user = new User("");   // user declared variable h, Name is too short, for running the setter
 // or
-user.name = "Doe";      // user object ban gaya, constructor me this.name = "Noni" gaya, jo setter ko chalayega kyuki let a =  new user(""); karte hi setter chal jayega ]
+user.name = "Doe";      // user object ban chuka h pehle hi, to user.name sidha set name() pe paas jayega, length < 4 hai, to name set nahi hoga, pehle wala hi reh jayega
 
 
-console.log(user.name);   // getter chala aur purani setted value => Noni ,  ye sab abhi no Noni hi hai kyuki Doe dene pr length bata rha h, name set nhi kar rha 
+
+console.log(user.name);   // getter chala aur purani setted value => Noni ,  ye sab abhi Noni ko hi denge kyuki Doe dene pr length bata rha h, name set hui hi nahi
 console.log(user._name);  // getter chala aur purani setted value => Noni ,  _name is the property of user, jisme setter se value set ho rahi h, ye directly access karna chahiye nahi, isliye hum getter setter use karte hai, taki hum control kar sake ki kya value set ho rahi h, aur kya value get ho rahi h
 
 
@@ -55,7 +56,7 @@ console.log(user._name);  // getter chala aur purani setted value => Noni ,  _na
 
 // class BankAccount {
 //   constructor(balance) {
-//     this._balance = balance;
+//     this.balance = balance;     // this.balance karte hi setter chal jayega
 //   }
 
 //   get balance() {
