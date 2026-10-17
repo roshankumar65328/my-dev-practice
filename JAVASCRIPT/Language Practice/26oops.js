@@ -21,7 +21,7 @@
 // Key generally symbol ya string hoti hai (dhayan rahe symbol ya string )
 
 // let obj = {
-//     name: "Noni",
+//     name: "Noni",    // name bina quote ke bhi string ka hi kaam kar rahi hai
 //     age: 20,
 //     "full name": "Noni Kumar"
 // };
@@ -114,8 +114,8 @@ class Animal{
 }
 
 class Lion extends Animal{    // animal ki sab property lion me hogi
-    constructor(name){
-        super(name)    // lion class me bhi name diya h hamne,extend bhi ki h class to super ko call karna hoga name ke sath to animal ka constructor bhi chal jayega
+    constructor(name){      // Jab koi derived class (extends wali class) apna constructor define karti hai, toh usmein this use karne se pehle parent constructor ko super() se call karna padta hai.
+        super(name)    // lion class me bhi name diya h hamne,extend bhi ki h class to super ko call karna hoga taaki name ke sath to animal ka constructor bhi chal jayega
         console.log('object is created & he is a lion...');   
     }
 

@@ -35,26 +35,26 @@ main()
 
 // postData() function ka structure kuch aisa hota hai function jaisa production website me
 
-async function postData(url = "", data = {}) {
-    const response = await fetch(url,{
-        method:'POST',   // GET, POST, PUT, DELETE, etc
-        mode: 'cors',  // no-cors, cors, same-origin
-        cache: 'no-cache', // default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, same-origin, omit
-        body:JSON.stringify(data),
-        headers:{
-            'content-type' : 'application/json; charset=UTF-8',
-        },
-        redirect: 'follow', // manual, follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-})
-    let res = await response.json()  // jo hame perform kiya uska resonse json me convert kiya
-    return res;
-}
+// async function postData(url = "", data = {}) {
+//     const response = await fetch(url,{
+//         method:'POST',   // GET, POST, PUT, DELETE, etc
+//         mode: 'cors',  // no-cors, cors, same-origin
+//         cache: 'no-cache', // default, no-cache, reload, force-cache, only-if-cached
+//         credentials: 'same-origin', // include, same-origin, omit
+//         body:JSON.stringify(data),
+//         headers:{
+//             'content-type' : 'application/json; charset=UTF-8',
+//         },
+//         redirect: 'follow', // manual, follow, error
+//         referrerPolicy: 'no-referrer', // no-referrer, no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+// })
+//     let res = await response.json()  // jo hame perform kiya uska resonse json me convert kiya
+//     return res;
+// }
 
-await postData("https://jsonplaceholder.typicode.com/posts", { title:'foo', body:'bar', userId:1 })
-    .then((data) => {    // yaha .then iss liye chal rha hai kyuki promise return kar rha hai na ye function || line 52 return res;
-        console.log(data); // JSON data parsed by `data.json()` call
-    });
+// postData("https://jsonplaceholder.typicode.com/posts", { title:'foo', body:'bar', userId:1 })
+//     .then((data) => {    // yaha .then iss liye chal rha hai kyuki promise return kar rha hai na ye function || line 52 return res;
+//         console.log(data); // JSON data parsed by `data.json()` call
+//     });
 
 // line 52,58 code mein Promise aapne new Promise() likhkar nahi banaya, balki fetch() aur async function ki wajah se Promise mil raha hai.
