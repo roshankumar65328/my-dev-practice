@@ -29,3 +29,19 @@ for(const student of students){
 console.log(houses);
 // console.log(typeof(houses));   // object
 
+
+
+
+// let peoples = {
+//     roshan: "",
+//     prithvi: "",
+//     popo: ""
+// };
+
+// for(const key in peoples){
+//     const currMarks = prompt("enter the student's marks");
+//     peoples[key] = currMarks;
+    
+    
+// }
+// console.log(peoples);

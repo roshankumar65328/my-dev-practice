@@ -16,8 +16,8 @@ console.log(human2);  // object (name,age)
 
 
 // aisa koi bhi function jisme aap this ka use kare &
-// function ko call ke time new ka use kare 
-// to new hame ek blank object dega
+// function ko call ke time new ka use karke object banaye
+// to fir new hame ek blank object dega, aur parameter jaake values set karenge
 
 
 function students(name,roll_no){
@@ -25,7 +25,7 @@ function students(name,roll_no){
     this.roll_no= roll_no;
 }
 
-students.prototype.nameOfStudent = function(){     // prototype constructor function ka ek property hai, jisme hum function define kar sakte hai, jo sabhi objects ke liye available hoga
+students.prototype.nameOfStudent = function(){     // 'prototype' constructor function ka ek property hai, jisme hum function define kar sakte hai, jo sabhi objects ke liye available hoga
     console.log(this.name);
     
 }

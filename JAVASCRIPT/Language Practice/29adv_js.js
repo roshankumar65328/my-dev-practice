@@ -1,7 +1,6 @@
 // console.log(a1);    // we can't use before declare , it show error if it is (let/const) , it will show undefine if it is (var)
 
-// ye sleeps function code ko 1 sec ke liye wait kara dega/ ye normal setTimeout se nhi ho pata promise se hojayega with fn ko async banakar
-// async function sleeps(){ 
+// async function sleeps(){     // ye sleeps function code ko 1 sec ke liye delay kara dega/ ye normal setTimeout se nhi ho pata promise se hojayega with fn ko async banakar
 //     return new Promise((resolve, reject)=>{
 //         setTimeout(()=>{
 //             resolve(35)
@@ -16,7 +15,7 @@ let sleeps = async ()=>{
     })
 }
 
-// hum aise variable me daal ke direct use 2 baar nhi kr sakte
+// hum aise variable me daal ke use nhi kr sakte
 // async function banana padega
     // let a = await sleeps()     
     // console.log(a)
@@ -48,10 +47,10 @@ console.log(p1,q1);     // 1 3
     let {a,c} = obj      // it get value from object
     console.log(a,c);    // 11 33
 
-        let arr = [1,4,6]
-        console.log(sum(arr[0], arr[1], arr[2]))    // here we call the sum function
-        console.log(sum(...arr))    //  ...arr represents all the values of arr (array), here we call the sum function
-        // console.log(3+2);   // 5
+    let arr = [1,4,6]
+    console.log(sum(arr[0], arr[1], arr[2]))    // here we call the sum function
+    console.log(sum(...arr))    //  ...arr represents all the values of arr (array), here we call the sum function
+    // console.log(3+2);   // 5
         
 
 

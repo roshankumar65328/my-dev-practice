@@ -1,4 +1,4 @@
-// this keyword meaning is different in different scenarios
+// this keyword meaning is different in the different scenarios
 
 // global - window
 console.log(this);
@@ -32,7 +32,7 @@ var obj2 = {
 obj2.name1();
 
 
-// funtion inside method (es6) - object
+// function inside method (es6) - object
 var obj3 = { 
     name2: function(){     // ye method h to object dega
         const childFunction = ()=>{    // arrow function parent se value lega to ye bhi object dega
@@ -47,10 +47,10 @@ obj3.name2();
 
 // constructor function me this ki value - new blank object
 function add(){
-    console.log(this);
-    console.log(this);
+    console.log(this);   // ye new blank object dega 
+    console.log(this);   // ye new blank object dega 
 }
-new add();   // ye window ho jata lekin, call ke time new lagane se ye object ho gaya
+new add();   // ye this ko window deta lekin, call ke time new lagane se ye object ho gaya
 
 
 // event listener me this ki value - that html element jispe event listener laga hai
@@ -58,3 +58,8 @@ document.querySelector("button").addEventListener("click", function (){
     console.log(this);
 })
 
+
+let newObj = {
+
+}
+console.log(newObj);

@@ -18,13 +18,12 @@ fnc();   // output = 2, due to closure, parent variable count ki value destroy n
 
 function timer(){
     var a = 12;
-    return setTimeout(function(){  // ye 2 second baad chalega, line 27 console ki baat kar rha h, to setTimeout ki default value jo browser me 1,2,3.... hoti , to whi prnt hogi
+    return setTimeout(function(){  // ye 2 second baad chalega, line 29 console ki baat kar rha h, to setTimeout ki default value jo browser me 1,2,3.... hoti , to whi prnt hogi
         console.log(a);
         // resolve();
     },2000) 
 }
 
-// async function main(){
 var out  = timer()
 console.log(out);
 

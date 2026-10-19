@@ -31,24 +31,24 @@
     <div>Initializing the Data</div>
     <script>
 
-       const addItem = async(item)=>{
-        await randomDelay();
-        let r = document.createElement("div")
-        r.innerHTML = item;
-        document.body.append(r)     // body me append kr diya (r) ko
-        
-       }
+        const addItem = async (item) => {
+            await randomDelay();
+            let r = document.createElement("div")
+            r.innerHTML = item;
+            document.body.append(r)     // body me append kr diya (r) ko
 
-       const randomDelay =()=>{
-        return new Promise((resolve, reject)=>{
-            timeout = 1 +6 *Math.random();
-            console.log(timeout);
-            
-            setTimeout(()=>{
-                resolve()
-            },timeout *1000)
-        })
-       }
+        }
+
+        const randomDelay = () => {
+            return new Promise((resolve, reject) => {
+                timeout = 7 * Math.random();
+                console.log(timeout);
+
+                setTimeout(() => {
+                    resolve()
+                }, timeout * 1000)
+            })
+        }
 
 
         async function main() {
@@ -65,13 +65,13 @@
             }, 100)
 
 
-             let text = ["Initialized Hacking now reading your data",
-            "Reading your Files",
-            "Password files Detected",
-            "Sending all passwords and personal files to server",
-            "Cleaning up"]
+            let text = ["Initialized Hacking now reading your data",
+                "Reading your Files",
+                "Password files Detected",
+                "Sending all passwords and personal files to server",
+                "Cleaning up"]
 
-            for(const item of text){
+            for (const item of text) {
                 await addItem(item)
             }
             // or 
@@ -92,4 +92,3 @@
 </body>
 
 </html>
-

@@ -16,15 +16,15 @@
         // we have to convert it into string & store it
         // when we need that object, we can parse the string-> object
         
-        if(localStorage.getItem("name")!= "null"){
+        if(localStorage.getItem("name") === "null"){
+            let a = prompt("enter your name")
+            localStorage.setItem("name",a);
+            document.write("Welcome ", a)
+            }
+            else{
                 let a = localStorage.getItem("name")
                 document.write("Welcome "+ a)
             }
-            else{
-                    let a = prompt("enter your name")
-                    localStorage.setItem("name",a);
-                    document.write("Welcome ", a)
-                }
                 
                 
                 
