@@ -14,3 +14,14 @@ document.querySelector(".customEvent").addEventListener("myCustomEvent",()=>{
 setTimeout(()=>{
    document.querySelector(".customEvent").dispatchEvent(myEvent);   // dispatch Event is must, if event is custom, write the variable that used for store the event
 },4000)
+
+
+// const myEvent1 = new Event("eventCode");
+
+// document.querySelector(".btn").addEventListener("eventCode", ()=>{
+//    console.log("it came throw the custom tap event");
+// })
+
+// document.querySelector(".btn").addEventListener("click", ()=>{
+//    document.querySelector(".btn").dispatchEvent(myEvent1)
+// })
