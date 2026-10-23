@@ -1,5 +1,5 @@
 let cont = document.querySelector(".container")
-document.querySelector(".add-btn").addEventListener("click",(e)=>{
+document.querySelector(".add-btn").addEventListener("click",()=>{
     fetch('https://randomuser.me/api/')
     .then(raw => raw.json())
     .then(res => addData(res))
