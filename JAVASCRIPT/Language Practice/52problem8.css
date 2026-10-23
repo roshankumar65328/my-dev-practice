@@ -17,7 +17,7 @@ img{
     width:120px;
     object-fit: cover;
     padding: 10px 20px;
-    object-position: left;
+    object-position: center;
     border-radius: 50%;
 }
 

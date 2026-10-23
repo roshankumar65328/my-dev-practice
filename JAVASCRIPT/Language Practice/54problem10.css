@@ -1,0 +1,20 @@
+p{
+    font-size: 22px;
+}
+
+.pgr-container{
+    width: 200px;
+    height: 10px;
+    background-color: rgb(174, 170, 170);
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+}
+.pgr{
+    height: 100%;
+    width: 0;
+    background-color: green;
+}
