@@ -1,8 +1,8 @@
 // form handling = in react form handling is needed as page is reloading at form submission, data will gone away and we need data before away so, we have go learn about form handling
 // form handling in react 1st method, useRef-
 // pehle useRef import karo
-// fir const variable = useRef(null) , function me declare karo kyuki use
-// jis jis imput ka data chahiye uspe ref={variabe daal do}
+// fir const variable = useRef(null) , function me declare karo, utne jitne variable chahiye
+// jis jis input ka data chahiye uspe ref={variabe daal do}
 // form tag me onSubmit={(e=> e.preventDefault())}
 
 import React,{useRef} from 'react'

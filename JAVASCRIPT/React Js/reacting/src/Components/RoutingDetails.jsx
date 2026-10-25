@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 function RoutingDetails() {
-    const {name} = useParams();
+    const {name} = useParams();   // :name me jo diya tha wo milega
     console.log(name)
     const navigate = useNavigate();
 

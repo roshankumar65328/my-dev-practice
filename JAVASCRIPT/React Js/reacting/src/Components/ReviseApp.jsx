@@ -19,8 +19,8 @@ function ReviseApp() {
   return (
       <div className="w-full bg-zinc-200 py-10 ">
         <div className="container mx-auto ">
-          <ReviseCards users={users} handleRemoveCard={handleRemoveCard} />
-          <ReviseForm users={users} FormHandleSubmitData={FormHandleSubmitData} />
+          <ReviseCards users={users} handleRemoveCard={handleRemoveCard} />    // jo users me data hoga usse show kara dega ReviseCard se 
+          <ReviseForm FormHandleSubmitData={FormHandleSubmitData} />      // ye form banake users me data set kar raha hai 
         </div>
       </div>
   )

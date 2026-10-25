@@ -7,4 +7,4 @@ function Props({text, color}){
 
 export default Props
 
-// props used to resuse the single component
+// props used to reuse the single component with the different data's

@@ -10,7 +10,7 @@ function ComponentLifecycle() {
     return()=>{
       console.log("Component Lifecycle has been deleted when user moved to another component")
     }
-  },[])           // [] -> for No Rerendering in page  ,  [variable] -> matlab wo variable har baar update hoga jab ye rerender hoga
+  },[])           // [] -> for None Rerendering in page  ,  [variable] -> matlab wo variable jab update hoga tab ye page rerender hoga
   // },[large])   //  yaha pe useEffect ke end se pehle ,[] lagane se Redendering nhi hogi kahi bhi , pr bade data me Rerendering karni hoti hai to iske [] ander uss useState variable ka name de denge jisko Rerender karwana hai
 
   return (
@@ -29,16 +29,18 @@ function ComponentLifecycle() {
 export default ComponentLifecycle
 
 
-// Reconcilation Updating
-// aisa change jisse page me reload nahi hota
+// Reconcilation 
+// sirf wo hissa pata karna jo pichle component se alag hai
 
 
-// Reconcilation Rerendering
+//  Rerendering
 // aisa change page me jisse wo particular component Delete -> then -> Create ho
 // useState change hone pe , page view change hone pe Reconcilation Rerendering hota hai
 // component update/refresh  = component delete + component create
 
 // by default har case me component me change karne me rerendering hota hai
+
+
 
 // Best Practices 
 // Chhote change me update kare 

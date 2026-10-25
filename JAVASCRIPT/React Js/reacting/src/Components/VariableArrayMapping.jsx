@@ -9,8 +9,8 @@ function VariableArrayMapping() {
       <div>
         {/* {ans} */}
 
-        {data.map((elem,index)=>(    // hum array mapping ke time key isliye use karte h kyuki, react vitual dom creation pr element ko difference kar sake
-          <div key={index} className='px-3 py-4 bg-zinc-300 rounded-md w-fit'>{elem}</div>
+        {data.map((elem,index)=>(    // hum array mapping ke time key isliye use karte h kyuki, react vitual dom creation pr element ko differentiate kar sake
+          <div key={index} className='px-3 py-4 bg-zinc-300 rounded-md w-fit'>{index}. {elem}</div>
         ))}
 
 

@@ -15,7 +15,7 @@ gsap.from(".page2 .circle",{
     scale:0,
     duration:1,
     rotate:720,
-    // scrollTrigger:".page .circle"   // aam zindgi - full animation once
+    // scrollTrigger:".page .circle"   // aam zindgi - full animation once at page reload
     scrollTrigger:{                 // mentos zindgi - animate with scroll
         trigger: ".page2 .circle",
         scroller:"body",

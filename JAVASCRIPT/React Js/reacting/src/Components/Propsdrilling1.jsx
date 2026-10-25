@@ -16,4 +16,4 @@ function Propsdrilling1() {
 export default Propsdrilling1
 
 
-// hamara data main app component me hoga, aur usse hum props ke thow card me late hai, har cord me 1 button hoga and add friend ka option hoga
+// hamara data main app component me hoga, aur usse hum props ke thow card me late hai, har card me 1 button hoga and add friend ka option hoga

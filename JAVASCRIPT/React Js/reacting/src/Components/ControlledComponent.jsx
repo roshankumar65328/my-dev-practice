@@ -1,5 +1,5 @@
 // controlled component form handling 2nd method 
-// use useState and declare '' to all input values and , add attribute on inputs onChange={event=> setVal({...val, change you current input})}
+// use useState and declare '' to all input values and , add attribute on inputs onChange={event=> setVal({...val, change your current input})}
 // on form tag onSubmit={event=> event.preventDefault()}
 
 import React, { useState } from 'react';

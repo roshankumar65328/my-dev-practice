@@ -18,7 +18,7 @@ function RoutingNav() {
             return [
                 e.isActive ? "text-red-500" : ""
             ].join(" ")
-          }} > Roting Contact </NavLink>
+          }} > Routing Contact </NavLink>
 
 
           <NavLink to="/routingabout">

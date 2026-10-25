@@ -14,7 +14,18 @@ function Context(props) {
     // console.log(props);   // ye pura app hai jo render ho rha hai
 
 
-  return <UserContext.Provider value={{users, setUsers}} > {props.children} </UserContext.Provider>     // value={{users, setUsers}}          agar value iss tarah object ke form me hai to receive bhi     const {users, setUsers} = useContext(UserContext);   iss tarah karna hoga 
+  return <UserContext.Provider value={{users, setUsers}} > 
+            {props.children} 
+         </UserContext.Provider>     // value={{users, setUsers}}          agar value iss tarah object ke form me hai to receive bhi     const {users, setUsers} = useContext(UserContext);   iss tarah karna hoga 
 }                                                                                                       // value={[products, setProducts]}    agar value iss tarah array  ke form me hai to receive bhi     const [products, setProducts] = useContext(UserContext);   iss tarah karna hoga
 
 export default Context
+
+
+
+
+// <Context>                        // main.jsx me sabse uper define karke children ko render kar denge
+//     <h1>Hello Roshan</h1>
+//     <p>Welcome to React</p>
+// </Context>
+
