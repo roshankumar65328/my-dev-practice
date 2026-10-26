@@ -2,8 +2,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate , Link, useParams} from 'react-router-dom'
 import { ProductsContext } from '../utils/Context'
 import {nanoid} from 'nanoid'
+import { toast } from 'react-toastify';
+
 
 function Edit() {
+    const navigate = useNavigate();
     const [products, setProducts] = useContext(ProductsContext);
     const [product, setProduct] = useState({
         image: "",
@@ -40,6 +43,7 @@ function Edit() {
         console.log(copyData);
         setProducts(copyData);
         localStorage.setItem("products", JSON.stringify(copyData))
+        toast.success("Product Edited Successfully !!");
         navigate(-1)
        
         

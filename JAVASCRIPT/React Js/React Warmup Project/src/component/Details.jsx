@@ -40,11 +40,11 @@ function Details() {
   },[id, products]);
 
 
-  const productDeleteHandler = ()=>{
+  const productDeleteHandler = (id)=>{
     const filteredProduct = products.filter((p)=> p.id !== id);
     setProducts(filteredProduct);
     localStorage.setItem("products", JSON.stringify(filteredProduct));
-    toast.error("Product Deleted");
+    toast.error("Product Deleted Successfully !!");
     navigate("/")
   }
 

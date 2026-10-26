@@ -11,9 +11,9 @@ function Nav() {
   
   const [products] = useContext(ProductsContext);
 
-  let distict_category = products && products.reduce((acc,curr)=>[...acc, curr.category],[])
+  let distict_category = products && products.reduce((acc,curr)=>[...acc, curr.category],[])      // acc (Accumulator)  —  ab tak jo result collect hua hai   ,   curr (Current element)  —  abhi jis element par kaam ho raha hai   ,   []	(Initial value)  —  accumulator ki starting value   ,   ...acc (spread operator)  array ki saari values ko naye array mein spread karega.  
   console.log(distict_category)
-  distict_category = [...new Set(distict_category)]
+  distict_category = [...new Set(distict_category)]    // JavaScript mein (Set) ek aisa collection hai jo unique values store karta hai.
   // console.log(distict_category)
 
 const getRandomColor = () => {
