@@ -20,3 +20,4 @@ function App(){
 
 export default App;
 
+// React mein state change hone par React component ko re-render karta hai, taaki UI latest state ke according update ho sake. Lekin state change hone ka matlab ye nahi hai ki poora page reload hota hai.
