@@ -11,7 +11,9 @@ const menu: Chai[] = [
     {name: "Masala", price: 15},
     {name: "Adrak", price: 25},
 ]
-// menu.push({name: "NewChai", price: 30})
+console.log(menu);
+menu.push({name: "NewChai", price: 30})
+console.log(menu);
 
 const cities: readonly string[] = ["Delhi", "Jaipur"];
 // cities.push("Pune");
@@ -25,11 +27,13 @@ const table: number[] [] = [
 
 let chaiTuple: [string, number];
 chaiTuple = ["Masala", 20];
-// chaiTuple = [20, "Masala"];
+// chaiTuple = [20, "Masala"];      // it should be in order of declaration
 
-let userInfo: [string, number, boolean?];
+let userInfo: [string, number, boolean?];    // boolean? matlab ye optional hai
 userInfo = ["Roshan", 100];
+console.log(userInfo);
 userInfo = ["Roshan", 100, true];
+console.log(userInfo);
 
 
 const location: readonly [number, number] = [28.66, 32.22];
@@ -79,3 +83,4 @@ makeChai(ChaiType.GINGER)
 
 let t: [string, number] = ["chai", 10]
 t.push("extra")
+console.log(t);

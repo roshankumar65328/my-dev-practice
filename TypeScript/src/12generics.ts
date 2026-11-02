@@ -1,18 +1,18 @@
-function wrapInArray <T> (item: T): T[] {
+function wrapInArray <T> (item: T): T[] {     // yahan TypeScript ka Generics (<T>) concept use kar rahe hain. Generics ka main purpose hai ek hi function ko different data types ke saath reuse karna, bina any use kiye.
     return [item]
 }
 
-wrapInArray("masala");
-wrapInArray(23);
-wrapInArray({flavour: "Ginger"});
+console.log(wrapInArray("masala"));
+console.log(wrapInArray(23));
+console.log(wrapInArray({flavour: "Ginger"}));
 
 function pair <A, B> (a: A, b: B): [A, B] {
     return [a,b];
 }
 
-pair("masala", "Chai")
-pair("masala", 20)
-pair("masala", {flavour: "Ginger"})
+console.log(pair("masala", "Chai"));
+console.log(pair("masala", 20));
+console.log(pair("masala", {flavour: "Ginger"}));
 
 
 interface Box <T> {
@@ -20,7 +20,9 @@ interface Box <T> {
 }
 
 const numberBox: Box <number> = {content: 10}
+console.log(numberBox);
 const numbercup: Box <string> = {content: "small"}
+console.log(numbercup);
 
 
 interface ApiPromise <T> {
@@ -32,3 +34,4 @@ const res: ApiPromise < {flavour: string} > = {
     status: 200,
     data: { flavour: "masala" }
 }
+console.log(res);

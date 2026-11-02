@@ -7,14 +7,14 @@
 // if it will throw type error then, do like this 
 // npm i -D @types/library_name     // library install ke sath types ko bhi install kar lena chahiye
 
-// last option if not work any method
+// last option if not work any method for typescript
 // "library_name.d.ts" create file name at recommand place copy paste recommandation
 
 
-import axios, {AxiosResponse} from "axios"
+// import axios, {AxiosResponse} from "axios"
 // or
-// import axios from "axios";
-// import type { AxiosResponse } from "axios";
+import axios from "axios";
+import type { AxiosResponse } from "axios";
 
 interface Todo {
     userId: number;
@@ -43,3 +43,5 @@ const fetchData = async () => {
         }
     }
 }
+
+fetchData()

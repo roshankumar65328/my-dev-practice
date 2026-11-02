@@ -2,7 +2,7 @@ interface Todo {
     userId: number;
     id: number;
     title: string;
-    completed: boolean
+    completed: boolean;
 }
 
 const fetchData = async () => {
@@ -12,7 +12,10 @@ const fetchData = async () => {
             throw new Error(`HTTP error ${response.status}`);
         }
         const data: Todo = await response.json();
+        console.log(data);
     } catch (error: any) {
        
     }
 }
+
+fetchData()

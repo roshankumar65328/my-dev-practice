@@ -40,5 +40,6 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["src/**/*.ts"]    // ye line baad me add ki hai, taaki Ab hum compiler ko batate hai ki filhaal sirf src folder ki TypeScript files compile karni hain.
 }

@@ -50,7 +50,7 @@ class Chai implements CupSize {
 
 // normally dekha jaye to function me hum type use karte hai, aur class me interface use karte hai
 
-// interface Response = {ok: true} | {ok: false}    // interface ke sath '|' ye kabhi nahi aata
+// interface Response = {ok: true} | {ok: false}    // interface ke sath '|' ye kabhi nahi aata, yaad rakhna
 // class myRes implements Response{
 //     ok: boolean = true;
 // }
@@ -85,6 +85,8 @@ type TeaType = "masala" | "ginger" | "lemon"        // isko literal type bhi keh
 function orderChai(t: TeaType){
     console.log(t);
 }
+orderChai("masala")
+
 
 type BaseChai = {tealeave: number}
 type Extra = {masala: number}
@@ -95,6 +97,8 @@ const cup: MasalaChai = {
     tealeave: 8,
     masala: 8
 }
+console.log(cup);
+
 
 type User = {
     username: string;
@@ -103,6 +107,8 @@ type User = {
 
 let u1: User = {username: "Roshan"}
 let u2: User = {username: "Prateek", bio: "prateek is a pilot"}
+
+console.log(u1, u2);
 
 
 type Config = {

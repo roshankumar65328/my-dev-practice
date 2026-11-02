@@ -25,16 +25,18 @@ class Chai1 {
     private secretIngredients = "Cardamom"
 
     reveal(){
-        return this.secretIngredients  // this park is ok of access private things
+        return this.secretIngredients  // this part is ok of access private things
     }
 
 }
 
 const c = new Chai1()
+console.log(c.flavour);     // Masala
+// console.log(c.secretIngredients);    // TypeScript error dega:
 
 
 class Shop {
-    protected shopName = "Chai Corner"
+    protected shopName = "Chai Ki Tapri"
 }
 
 class Branch extends Shop {
@@ -42,6 +44,8 @@ class Branch extends Shop {
         return this.shopName   // this will work fine
     }
 }
+let Rajendra_Park = new Branch()
+console.log(Rajendra_Park.getName());    // Chai Ki Tapri
 
 
 class Wallet {
@@ -52,16 +56,18 @@ class Wallet {
     }
 }
 const w = new Wallet()
+console.log(w.getBalance());
 
 
 class Cup {
     readonly capacity: number = 250
 
     constructor(capacity: number){
-        this.capacity = capacity
+        this.capacity = capacity      // readonly property ko hum constructor ke ander change kar sakte hai
     }
 }
-
+const Cup1 = new Cup(200)
+console.log(Cup1);      //  Cup { capacity: 200 }
 
 class ModernChai {
     private _sugar = 2
@@ -78,10 +84,11 @@ class ModernChai {
 
 const modernC = new ModernChai()
 modernC.sugar = 3
+console.log(modernC.sugar);     // 3
 
 
 class EkChai {
-    static shopName = "Noni Coding Agency"
+    static shopName = "Noni Coding Agency"     // bina objects banaye class variable ko access kr sakte hai static variable
 
     constructor(public flavour: string){}
 }
@@ -92,21 +99,29 @@ abstract class Drink{
     abstract make(): void 
 }
 
-class MyChai extends Drink{
+class MyChai extends Drink{     // jo class Drink ko inherit karega usme abstract make() fn milega, jo class extend kar rahi hai usse make() banana hi hoga nahi to error dega
     make(){
         console.log("Brewing Chai");
     }
 }
+const MyChaiObject = new MyChai()
+MyChaiObject.make()
 
 
 class Heater {
-    heat(){}
+    heat(){
+        console.log("Heating Water....");
+    }
 }
 
 class ChaiMaker {
     constructor(private heater: Heater){}   // composition jo inheritance ke jaise kaam karta hai
 
     make(){
-        this.heater.heat
+        this.heater.heat()
     }
 }
+
+const heater = new Heater();
+const chaiMakerMachine = new ChaiMaker(heater);
+chaiMakerMachine.make();

@@ -39,7 +39,8 @@ let smallCup: Cup = {size: "200ml"}
 
 let bigCup = {size: "500ml", material: "steel"}
 
-smallCup = bigCup
+smallCup = bigCup       // smallCup ne check kiya ki bigCup me 'size' variable hai ki nahi mila to allow kar diya, it is called Structural Typing / Excess Property Checking
+console.log(smallCup);
 
 
 type Brew = {brewTime: number}
@@ -74,7 +75,7 @@ type Chai = {
     isHot: boolean
 }
 
-const updateChai = (updates: Partial<Chai>) => {
+const updateChai = (updates: Partial<Chai>) => {        // TypeScript ka Partial<T> utility type use kar rahe hain, Normally agar aap Chai type ka object banate hain, to saari properties deni padengi, Lekin Partial<Chai> 'Chai' ki saari properties ko optional (?) bana deta hai.
     console.log("updating chai with", updates);
 }
 updateChai({price: 25})     // partial type single edit
@@ -104,9 +105,9 @@ type newChai = {
     ingredients: string[]
 }
 
-type BasicChaiInfo = Pick <newChai, "name" | "price">;  // kisi type me se kuch variable ko use karne ke liye
+type BasicChaiInfo = Pick <newChai, "name" | "price">;  // Pick: kisi type me se kuch variable ko use karne ke liye, Yahan "name" | "price" ka matlab hai name OR price mein se koi ek choose karo, ya dono properties bhi use kar sakte hai
 
-const chaiInfo: BasicChaiInfo = {
+const chaiInfo: BasicChaiInfo = {       // newChai type mein se sirf name aur price properties select honge
     name: "Lemon Tea",
     price: 30
 }

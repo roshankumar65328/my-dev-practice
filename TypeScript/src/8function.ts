@@ -8,11 +8,13 @@ makeChai("Masala", 2)
 function getChaiPrice(): number {
     return 5;
 }
+getChaiPrice()
 
 
 function logChai(): void{   // log-in type ka function jo kuch return nahi karta
     console.log("Chai is ready");
 }
+logChai()
 
 
 // function makeOrder(order: string): string{   // return type string karke 'null' nahi return kar sakte
@@ -21,11 +23,12 @@ function logChai(): void{   // log-in type ka function jo kuch return nahi karta
 // }
 function makeOrder(order: string){
     if(!order) return null;
-    return order;
+    return console.log(order);
 }
+makeOrder("Malai Maar Ke")
 
 
-// function orderChai(type?: string){    // ye optional wala paraneter end me likhenge agar aur paramerter hai to
+// function orderChai(type?: string){    // ye optional parameter hai end me likhenge agar aur paramerter hai to
 // } 
 
 

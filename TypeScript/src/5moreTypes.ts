@@ -12,14 +12,14 @@ let bookObject = JSON.parse(bookString) as Book    // JSON.parse -> string to ob
 
 console.log(bookObject);
 
-const inputElement = document.getElementById("username") as HTMLInputElement;
+// const inputElement = document.getElementById("username") as HTMLInputElement;
 
 let value: any  // TypeScript, is variable ka type check mat karo. Mujhe jo karna hai karne do
 
 value = "chai"
 value = [1,2,3]
 value = 2.5
-value.toUpperCase()    // production me jaake error dega kyuki '2.5' ka 'toUpperCase' method hota hi nahi
+// value.toUpperCase()    // production me jaake error dega kyuki '2.5' ka 'toUpperCase' method hota hi nahi
 
 let newValue: unknown   // TypeScript, mujhe abhi nahi pata ki is variable ke andar kya hai. Isliye pehle check karo, phir operation karna.
 
@@ -50,7 +50,7 @@ type Role = "admin" | "user"
 
 function redirectBasedOnRole(role: Role): void {
     if(role === "admin"){
-        console.log("Redirecting to Dashboard");
+        console.log("Redirecting to Admin Dashboard");
         return
     }
     if(role === "user"){
@@ -67,3 +67,9 @@ redirectBasedOnRole("user")
 function neverReturn(): never{  // Ye function normally kabhi complete nahi hoga aur kabhi koi value return nahi karega
     while(true){}       // never ending loop like our server never ends
 }
+
+
+let a = {
+    name: "my name is roshan kumar singh gupta"
+}
+console.log(a)
