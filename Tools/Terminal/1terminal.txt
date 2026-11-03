@@ -1,0 +1,826 @@
+1. Terminal kya hota hai?
+Terminal ek text-based interface hai jiske through hum computer ko commands dekar instructions dete hain.
+
+Normally hum computer ko mouse se operate karte hain:
+- Folder open karna.
+- File create karna.
+- File delete karna.
+- Software install karna.
+- Application run karna.
+Lekin Terminal mein hum yehi kaam commands likhkar kar sakte hain.
+
+
+Example:
+Normally File Explorer mein folder create karne ke liye Right Click → New Folder karte hain.
+
+Terminal mein:
+mkdir MyProject
+Bas! MyProject naam ka folder create ho jayega.
+
+Terminal, CMD, PowerShell aur VS Code Terminal mein difference
+Name	                        Meaning
+Terminal	            Commands execute karne ka interface
+CMD	                    Windows ka Command Prompt
+PowerShell	            Windows ka advanced command-line shell
+Windows Terminal	    Ek application jisme CMD aur PowerShell jaise shells chala sakte hain
+VS Code Terminal	    VS Code ke andar integrated terminal
+
+Important: Terminal khud programming language nahi hai. Ye ek interface hai jiske through hum Shell ko commands dete hain.
+
+
+
+
+2. Development mein Terminal kyu use karte hain?
+Web Development mein Terminal ke major uses:
+
+1. Project aur folders create karna.
+2. Files aur directories manage karna.
+3. Node.js aur npm commands execute karna.
+4. React/Vite projects create karna.
+5. Packages aur libraries install karna.
+6. Development server start karna.
+7. TypeScript compile karna.
+8. Git aur GitHub manage karna.
+9. Production build generate karna.
+10. Project deploy karna.
+11. Errors aur logs check karna.
+12. Environment variables aur configuration manage karna.
+
+Iske alawa normal computer usage mein bhi Terminal ka use hota hai, jaise network troubleshoot karna, IP address check karna, system information dekhna, processes manage karna aur files search karna.
+
+
+
+
+3. Basic Terminal Commands (Must Know)
+Ye commands aapko sabse pehle seekhni chahiye.
+
+A. Current location aur folders dekhna
+Command	                        Work
+pwd	                Current working directory ka path batata hai (PowerShell, Git Bash, Linux, macOS).
+cd	                Directory change karta hai.
+dir	                Current folder ki files aur folders dikhata hai (Windows).
+ls	                Files aur folders list karta hai (PowerShell, Linux, macOS, Git Bash).
+cls	                Terminal screen clear karta hai (Windows).
+clear	            Terminal screen clear karta hai (Linux/macOS/Git Bash).
+
+
+Examples:
+# Current directory check karna
+pwd
+
+# Current folder ke andar files dekhna
+dir
+
+# Kisi folder ke andar jaana
+cd Documents
+
+# Ek folder peeche jaana
+cd ..
+
+# Root directory mein jaana
+cd /
+
+# Terminal screen clear karna
+cls
+
+
+
+Samjhiye cd ka actual use:
+
+Maan lijiye aapka project yahan hai:
+R:\Practice\Web Development\React Js\FlixVerse
+
+To project folder mein jaane ke liye:
+cd "R:\Practice\Web Development\React Js\FlixVerse"
+
+
+
+Spaces wale folder paths ko quotes mein likhna safe hai.
+
+B. Folder aur file create karna
+Command	                    Work
+mkdir	            New directory/folder create karta hai.
+New-Item	        PowerShell mein file ya folder create karta hai.
+touch	            Linux/macOS/Git Bash mein file create karta hai ya timestamp update karta hai.
+rmdir	            Empty directory delete karta hai.
+Remove-Item	        PowerShell mein file ya folder remove karta hai.
+
+
+
+Examples:
+# New folder create karna
+mkdir MyProject
+
+# Multiple folders create karna
+mkdir HTML CSS JavaScript
+
+# New file create karna
+New-Item index.html
+
+# JavaScript file create karna
+New-Item script.js
+
+# Empty folder delete karna
+rmdir MyProject
+
+
+C. Files aur folders manage karna
+Command	                            Work
+Copy-Item	                File/folder copy karta hai (PowerShell).
+Move-Item	                File/folder move karta hai.
+Rename-Item	                File/folder rename karta hai.
+Remove-Item	                File/folder delete karta hai.
+Get-Content	                File ka content read karta hai (PowerShell).
+cat	                        File content read karta hai (Git Bash/Linux/macOS).
+Get-ChildItem -Recurse	    Current folder aur uske subfolders ki listing deta hai.
+
+
+Examples:
+# File copy karna
+Copy-Item index.html backup.html
+
+# File move karna
+Move-Item index.html HTML/
+
+# File rename karna
+Rename-Item script.js app.js
+
+# File ka content dekhna
+Get-Content app.js
+
+# Kisi file ko delete karna
+Remove-Item app.js
+
+# Folder aur uske andar ki files list karna
+Get-ChildItem -Recurse
+
+Caution: Remove-Item aur Remove-Item -Recurse -Force carefully use karein. Ye files permanently remove kar sakte hain.
+
+
+
+
+4. Node.js aur npm Commands (Web Development ke liye)
+Ye commands aapke liye bahut important hain kyunki aap JavaScript, React aur TypeScript use karte hain.
+A. Node.js commands
+
+Command	                                Work
+node -v	                        Installed Node.js version check karta hai.
+npm -v	                        Installed npm version check karta hai.
+node filename.js	            JavaScript file execute karta hai.
+node --watch filename.js	    File change hone par automatically dobara execute karta hai.
+node	                        Node.js REPL open karta hai, jahan directly JavaScript likh sakte hain.
+.exit	                        Node.js REPL se exit karta hai.
+
+
+Examples:
+# Node.js version check
+node -v
+
+# npm version check
+npm -v
+
+# JavaScript file run karna
+node app.js
+
+# File change hone par automatically run karna
+node --watch app.js
+
+# Node.js REPL open karna
+node
+
+# REPL mein exit karna
+.exit
+
+Node.js ka use: Browser ke bahar JavaScript execute karne ke liye Node.js runtime use hota hai.
+
+
+B. npm commands
+npm (Node Package Manager) ka use JavaScript projects mein packages aur dependencies manage karne ke liye hota hai.
+
+Example: Aapko React project mein Axios use karna hai. Axios khud se code likhne ke bajaye npm se install kar sakte hain.
+
+Command                 	            Work
+npm init	                    Naya Node.js project initialize karta hai.
+npm init -y	                    Default settings ke saath package.json create karta hai.
+npm install	                    package.json mein listed dependencies install karta hai.
+npm install package-name	    Specific package install karta hai.
+npm install -D package-name	    Development dependency install karta hai.
+npm uninstall package-name	    Package uninstall karta hai.
+npm update	                    Installed packages update karta hai, version constraints ke according.
+npm list	                    Installed packages ki list dikhata hai.
+npm list --depth=0	            Sirf direct dependencies dikhata hai.
+npm run script-name	            package.json ka custom script execute karta hai.
+npm start	                    start script execute karta hai.
+npm run build	                Project ka build script execute karta hai, agar configured ho.
+npm run dev                 	Development script execute karta hai, agar configured ho.
+npm audit	                    Dependencies mein known security vulnerabilities check karta hai.
+npm cache clean --force	        npm cache clear karta hai (normally zaroorat nahi padti).
+
+
+Examples:
+# Project initialize karna
+npm init -y
+
+# React install karna
+npm install react
+
+# React Router install karna
+npm install react-router-dom
+
+# Axios install karna
+npm install axios
+
+# Development dependency install karna
+npm install -D typescript
+
+# Package uninstall karna
+npm uninstall axios
+
+# Installed packages dekhna
+npm list --depth=0
+
+# package.json ka dev script run karna
+npm run dev
+
+# Production build generate karna
+npm run build
+
+
+package.json aur node_modules kya hote hain?
+Jab aap npm install karte hain, generally do important cheezein hoti hain:
+
+- package.json: Project ki information, scripts aur dependencies ki details rakhta hai.
+- node_modules: Installed packages ka actual code rakhta hai.
+- package-lock.json: Dependencies ke exact resolved versions aur dependency tree ko lock karta hai.
+
+Important commands:
+# Existing project ki dependencies install karna
+npm install
+
+# package-lock.json ke according clean installation
+npm ci
+
+npm ci existing node_modules ko replace karke lockfile ke according clean installation karta hai. Ye generally CI/CD environments mein useful hota hai.
+
+
+
+
+5. React aur Vite Commands
+React project create karne aur run karne ke liye ye commands useful hain.
+
+Command	                            Work
+npm create vite@latest	    Vite project create karne ka setup start karta hai.
+npm run dev	                Development server start karta hai.
+npm run build	            Production build generate karta hai.
+npm run preview	            Production build locally preview karta hai.
+npm install	                Project dependencies install karta hai.
+
+Complete example:
+# React project create karna
+npm create vite@latest my-project
+
+# Project folder mein jaana
+cd my-project
+
+# Dependencies install karna
+npm install
+
+# Development server start karna
+npm run dev
+
+# Production build generate karna
+npm run build
+
+# Production build preview karna
+npm run preview
+
+
+Jab aap npm run dev execute karte hain, Vite development server start hota hai aur aapko generally ek local URL milta hai:
+http://localhost:5173/
+
+Is URL ko browser mein open karke apna React project dekh sakte hain.
+
+Server stop karna:
+Ctrl + C
+
+
+
+
+6. TypeScript Commands
+Aap TypeScript bhi seekh rahe hain, isliye ye commands bhi important hain.
+
+Command	                    Work
+tsc -v	            TypeScript compiler version check karta hai.
+tsc --init	        TypeScript configuration file create karta hai.
+tsc	                TypeScript files compile karta hai, configured project ke according.
+tsc filename.ts	    Specific TypeScript file compile karta hai.
+tsc --watch	        Changes detect karke automatically compilation karta hai.
+tsc --noEmit	    Type checking karta hai, JavaScript output generate nahi karta.
+tsc --showConfig	Effective TypeScript configuration dikhata hai.
+npx tsc	            Project/local TypeScript compiler execute karta hai.
+
+Examples:
+# TypeScript version check
+npx tsc -v
+
+# TypeScript configuration create
+npx tsc --init
+
+# TypeScript compile
+npx tsc
+
+# Specific file compile
+npx tsc src/index.ts
+
+# Automatically compile on changes
+npx tsc --watch
+
+# Sirf errors check karna, JS file generate nahi karna
+npx tsc --noEmit
+
+# Configuration check
+npx tsc --showConfig
+
+
+Important difference:
+.ts  = TypeScript source file
+.js  = JavaScript output file
+tsc  = TypeScript compiler
+
+Example:
+npx tsc src/index.ts
+node src/index.js
+
+Note: Ye simple example hai. Agar aapne outDir configure kiya hai, to compiled file dist jaise folder mein generate ho sakti hai. Aise mein actual output path se Node command chalani hogi.
+
+
+
+
+7. Git aur GitHub Commands
+Developer ke liye Git bahut important hai. Git ka use code changes track karne aur different versions manage karne ke liye hota hai.
+
+GitHub par code upload karne ke liye bhi Git commands use hoti hain.
+
+Command	                            Work
+git --version	            Git version check karta hai.
+git init	                Current folder mein Git repository initialize karta hai.
+git status	                Current changes ka status dikhata hai.
+git add .	                Current directory ke changes staging area mein add karta hai.
+git add filename	        Specific file staging mein add karta hai.
+git commit -m "message"	    Staged changes ka snapshot save karta hai.
+git log	                    Previous commits ka history dikhata hai.
+git log --oneline	        Short commit history dikhata hai.
+git branch	                Local branches list karta hai.
+git switch branch-name	    Existing branch switch karta hai.
+git switch -c branch-name	New branch create karke switch karta hai.
+git merge branch-name	    Specified branch ko current branch mein merge karta hai.
+git clone URL	            Remote repository ki copy download karta hai.
+git pull	                Remote changes fetch karke current branch mein integrate karta hai.
+git fetch	                Remote changes download karta hai, merge nahi karta.
+git push	                Local commits remote repository par upload karta hai.
+git remote -v	            Connected remote repositories ki URLs dikhata hai.
+git diff	                Unstaged changes ka difference dikhata hai.
+git restore filename	    Unstaged file changes discard karta hai.
+
+
+
+Git ka actual workflow
+
+1. Working Directory
+Aap code mein changes karte hain.
+    |
+git add .
+2. Staging Area
+Commit ke liye changes select hote hain.
+    |
+git commit -m "message"
+3. Local Repository
+Changes ka snapshot save ho jata hai.
+    |
+git push
+4. Remote Repository (GitHub)
+Aapka committed code GitHub par upload ho jata hai.
+
+
+
+Real project example:
+# Git initialize
+git init
+
+# Current changes check
+git status
+
+# All changes stage
+git add .
+
+# Commit create
+git commit -m "Added homepage"
+
+# GitHub repository connect
+git remote add origin https://github.com/username/repository.git
+
+# Branch name main set karna
+git branch -M main
+
+# GitHub par code upload
+git push -u origin main
+
+Agar repository pehle se clone ki hui hai, to dobara git init ya git remote add origin karne ki zaroorat nahi hoti.
+
+
+
+
+8. Networking Commands (Normal Usage + NOC Interview)
+Ye commands sirf developers ke liye nahi hain. Network troubleshooting, IT support aur NOC Engineer ke liye bhi bahut important hain.
+
+Command	                                                    Work
+ipconfig	                                    Windows ka IP configuration dikhata hai.
+ipconfig /all	                                Detailed network configuration dikhata hai.
+ipconfig /release	                            DHCP se mila IPv4 address release karta hai.
+ipconfig /renew	                                DHCP se naya IP address request karta hai.
+ipconfig /flushdns	                            DNS resolver cache clear karta hai.
+ping google.com	                                Destination tak connectivity test karta hai.
+ping -t google.com	                            Continuous ping karta hai, Ctrl+C se stop hota hai.
+tracert google.com	                            Destination tak network route trace karta hai.
+nslookup google.com	                            DNS resolution check karta hai.
+netstat -ano	                                Network connections aur listening ports with PID dikhata hai.
+arp -a	                                        ARP cache mein IP aur MAC mapping dikhata hai.
+hostname	                                    Computer ka hostname dikhata hai.
+getmac	                                        System ke MAC addresses dikhata hai.
+route print	                                    Routing table dikhata hai.
+pathping google.com	                            Route aur packet loss analysis karta hai.
+Test-NetConnection google.com -Port 443	        Specific TCP port ki connectivity test karta hai (PowerShell).
+
+Practical examples
+# IP address check
+ipconfig
+
+# Complete network information
+ipconfig /all
+
+# Internet connectivity check
+ping google.com
+
+# Continuous connectivity monitoring
+ping -t 8.8.8.8
+
+# DNS cache clear
+ipconfig /flushdns
+
+# DNS server se domain resolve karna
+nslookup google.com
+
+# Network route check
+tracert google.com
+
+# Active network connections check
+netstat -ano
+
+# MAC address check
+getmac
+
+# Routing table check
+route print
+
+# HTTPS port 443 check
+Test-NetConnection google.com -Port 443
+
+
+NOC Engineer ke liye in commands ka use:
+- ping: Check karna ki destination reachable hai ya nahi.
+- tracert: Network path mein kis hop par issue ho sakta hai.
+- ipconfig: IP, gateway aur DNS configuration check karna.
+- nslookup: DNS problem identify karna.
+- netstat: Active connections aur ports check karna.
+- pathping: Packet loss aur latency issues investigate karna.
+
+Important: Ping fail hone ka matlab hamesha ye nahi hota ki destination down hai. Firewall ya ICMP blocking bhi reason ho sakta hai.
+
+
+
+
+9. System Information aur Process Management Commands
+Terminal se aap apne computer ki system information aur running applications bhi check kar sakte hain.
+
+Command	                    Work
+systeminfo	        Windows ki detailed system information deta hai.
+whoami	            Current logged-in user batata hai.
+hostname	        Computer ka naam batata hai.
+tasklist	        Running processes ki list dikhata hai.
+taskkill	        Running process terminate karta hai.
+Get-Process	        PowerShell mein running processes dikhata hai.
+Get-Service	        Windows services ki list dikhata hai.
+Get-Date	        Current date aur time dikhata hai.
+Get-Location	    Current working directory batata hai.
+Get-Command	        Available commands ke baare mein information deta hai.
+
+Examples:
+# System information
+systeminfo
+
+# Current user
+whoami
+
+# Running applications/processes
+tasklist
+
+# Specific process terminate karna
+taskkill /PID 1234 /F
+
+# Running processes
+Get-Process
+
+# Windows services
+Get-Service
+
+# Current date and time
+Get-Date
+
+# Current location
+Get-Location
+
+taskkill /PID 1234 /F mein 1234 example PID hai. Aapko actual PID use karni hogi. Galat process terminate karne se application ya system ka kaam interrupt ho sakta hai.
+
+
+
+
+10. Internet aur File Download Commands
+Terminal se internet resources access karna, files download karna aur APIs test karna bhi possible hai.
+
+Command	                    Work
+curl URL	        URL se data request karta hai.
+curl -I URL	        HTTP response headers check karta hai.
+curl -o file URL	URL se file download karke specified naam se save karta hai.
+Invoke-WebRequest	PowerShell mein HTTP requests bhejta hai.
+Invoke-RestMethod	APIs se data retrieve aur JSON responses process karne mein useful hai.
+ssh user@host	    Remote machine se secure connection establish karta hai.
+
+Examples:
+# Website ka response check karna
+curl https://example.com
+
+# HTTP headers check karna
+curl -I https://example.com
+
+# File download karna
+curl -o image.jpg https://example.com/image.jpg
+
+# API se data fetch karna
+Invoke-RestMethod https://jsonplaceholder.typicode.com/todos/1
+
+# Remote server connect karna
+ssh username@server-ip
+
+Developer ke liye curl ka important use:
+Maan lijiye aap backend API bana rahe hain aur check karna chahte hain ki API response de rahi hai ya nahi. Aap browser ki jagah Terminal se bhi request bhej sakte hain.
+
+
+
+
+11. Environment Variables aur Path Commands
+Environment variables system ya applications ki configuration values store karne ke liye use hote hain.
+
+Command	                        Work
+echo $env:PATH	        PowerShell mein PATH environment variable dikhata hai.
+echo $env:NODE_ENV	    NODE_ENV ki value check karta hai.
+$env:NAME="value"	    Current PowerShell session mein variable set karta hai.
+set	                    CMD mein environment variables dikhata hai.
+$env:NAME	            PowerShell mein variable ki value access karta hai.
+
+Examples:
+# PATH check karna
+echo $env:PATH
+
+# Node environment check
+echo $env:NODE_ENV
+
+# Temporary environment variable set karna
+$env:NODE_ENV = "development"
+
+# Variable ki value read karna
+echo $env:NODE_ENV
+
+
+PATH kya hai?
+PATH ek environment variable hai jisme directories ke locations stored hote hain. Jab aap Terminal mein node, npm ya git likhte hain, operating system PATH mein un commands ko search kar sakta hai.
+
+Important: API keys aur passwords ko directly commands mein likhkar ya GitHub par upload karke expose mat karein. .env files aur .gitignore ka use karein.
+
+
+
+
+12. Terminal mein Help aur Shortcuts
+Har command yaad rakhna zaroori nahi hai. Aap Terminal se hi commands ki help le sakte hain.
+
+Command / Shortcut	                 Work
+command --help	            Supported commands mein help option se usage dekhna.
+Get-Help command	        PowerShell command ki help.
+Get-Command	                Available commands find karna.
+Tab	                        Command ya file/folder name autocomplete karna.
+↑ / ↓	                    Previous aur next commands dekhna.
+Ctrl + C	                Running command interrupt karna.
+Ctrl + L	                Terminal screen clear karna (supported shells).
+Ctrl + Shift + V	        Terminal mein paste karna (Windows Terminal/VS Code defaults).
+Ctrl + R	                Previous command history search karna (Bash/Git Bash).
+
+Examples:
+# mkdir ki help
+Get-Help mkdir
+
+# Available commands search
+Get-Command *process*
+
+# Git help
+git --help
+
+# npm help
+npm help install
+
+# Node help
+node --help
+
+
+
+
+13. Development mein kuch aur important commands
+Ye commands aapko projects ke saath kaam karte waqt milengi.
+
+Command	                    Work
+code .	            Current folder VS Code mein open karta hai.
+code filename	    Specific file VS Code mein open karta hai.
+npx	                npm ke through package binaries execute karta hai.
+npx create-vite	    Vite project generator execute karta hai.
+npx tsc	            TypeScript compiler execute karta hai.
+where.exe node	    Windows mein Node executable ka location dikhata hai.
+where.exe git	    Git executable ka location dikhata hai.
+where.exe python	Python executable ka location dikhata hai.
+npm run	            Available npm scripts list karta hai.
+git diff	        Code changes compare karta hai.
+
+Example:
+# Current project VS Code mein open karna
+code .
+
+# Kisi particular file ko open karna
+code index.html
+
+# Node.js installation location
+where.exe node
+
+# Git installation location
+where.exe git
+
+# Available npm scripts
+npm run
+
+
+
+
+14. Kuch important commands jo PowerShell aur CMD mein alag hain
+Aapke laptop mein Windows aur VS Code Terminal use hota hai, isliye ye difference samajhna important hai.
+
+Task	                        PowerShell	                    CMD
+Current directory	        Get-Location / pwd	                cd
+Files list	                Get-ChildItem / dir	                dir
+Clear screen	             Clear-Host / cls	                cls
+File content	                Get-Content	                    type
+Environment variable	         $env:PATH	                   %PATH%
+File delete	                    Remove-Item	                    del
+Folder delete	            Remove-Item -Recurse	          rmdir /s
+Process list	                Get-Process	                  tasklist
+
+Ek important baat: Har command har Terminal mein same tarah kaam nahi karti. CMD, PowerShell, Git Bash aur Linux shells ke syntax mein differences hote hain.
+
+
+
+
+15. Real-life development workflow: Terminal ka complete use
+Ab ek example se samajhte hain ki ek frontend developer daily Terminal kaise use karta hai.
+
+Maan lijiye aapko ek naya React project banana hai, GitHub par upload karna hai aur Vercel par deploy karna hai.
+1. Step 1: Project folder mein jaana
+   cd "R:\Practice\Web Development"
+
+2. Step 2: React project create karna
+   npm create vite@latest my-app
+
+3. Step 3: Project directory mein jaana
+   cd my-app
+
+4. Step 4: Dependencies install karna
+   npm install
+
+5. Step 5: VS Code mein project open karna
+   code .
+
+6. Step 6: Development server start karna
+   npm run dev
+
+7. Step 7: Production build generate karna
+   npm run build
+
+8. Step 8: Git initialize aur commit karna
+   git init
+   git add .
+   git commit -m "Initial commit"
+
+9. Step 9: GitHub par upload karna
+   git remote add origin YOUR_REPOSITORY_URL
+   git branch -M main
+   git push -u origin main
+
+Is tarah Terminal aapke complete development workflow ka important part ban jata hai.
+
+Vercel par deployment ke liye GitHub repository connect karke automatic deployments bhi configure kar sakte hain. Har baar manually Terminal se deploy karna zaroori nahi hai.
+
+
+
+
+16. Kaun-si commands sabse pehle yaad karni chahiye?
+Saari commands ek saath yaad karne ki zaroorat nahi hai. Main aapko priority ke according divide kar raha hoon.
+
+Level 1 – Must Know
+Highest priority
+
+Daily development ke liye
+pwd
+cd
+dir
+mkdir
+cls
+node -v
+npm -v
+npm init -y
+npm install
+npm run dev
+npm run build
+code .
+
+
+
+Level 2 – Developer Essentials
+Important
+
+npm uninstall
+npm list
+npx
+npx tsc
+git init
+git status
+git add .
+git commit
+git push
+git pull
+git clone
+git log
+
+
+
+Level 3 – System & Networking
+Additional skills
+
+ipconfig
+ipconfig /all
+ipconfig /flushdns
+ping
+tracert
+nslookup
+netstat -ano
+arp -a
+route print
+tasklist
+taskkill
+systeminfo
+curl
+ssh
+
+
+
+
+17. Terminal seekhte waqt ye mistakes mat karna
+
+1. Har command ko blindly execute mat karein: Pehle samjhein ki command kya karne wali hai.
+2. Wrong directory mein commands mat chalayein: pwd ya Get-Location se current location check karein.
+3. Delete commands carefully use karein: Remove-Item, rmdir jaise commands data delete kar sakte hain.
+4. Admin privileges samajhkar use karein: Har command Administrator mode mein chalana zaroori nahi hai.
+5. Errors ko ignore mat karein: Terminal mein error message aksar batata hai ki problem kahan hai.
+6. Har package globally install mat karein: Project-specific packages ko generally local install karna better hai.
+
+
+
+
+18. Aapke liye practice tasks
+In tasks ko khud Terminal mein execute karke dekhiye.
+
+Terminal practice checklist
+
+1. Current working directory check karein.
+2. Desktop par MyTerminal folder create karein.
+3. MyTerminal ke andar HTML, CSS aur JS folders banayein.
+4. Ek index.html file create karein.
+5. File ko rename karke home.html karein.
+6. VS Code mein current folder open karein.
+7. Node.js aur npm versions check karein.
+8. Google ko ping karke connectivity check karein.
+9. Apne laptop ka IP address check karein.
+10. Running processes ki list dekhein.
